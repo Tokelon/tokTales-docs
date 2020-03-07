@@ -49,7 +49,7 @@ com.tokelon.toktales.core.engine.input
 com.tokelon.toktales.core.engine.log
 com.tokelon.toktales.core.engine.render
 com.tokelon.toktales.core.engine.setup
-com.tokelon.toktales.core.engine.setup.scripts
+com.tokelon.toktales.core.engine.setup.steps
 com.tokelon.toktales.core.engine.storage
 com.tokelon.toktales.core.engine.ui
 com.tokelon.toktales.core.game
