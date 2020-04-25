@@ -112,6 +112,7 @@ com.tokelon.toktales.desktop.lwjgl.input
 com.tokelon.toktales.desktop.lwjgl.render
 com.tokelon.toktales.desktop.lwjgl.render.opengl
 com.tokelon.toktales.desktop.lwjgl.render.opengl.gl20
+com.tokelon.toktales.desktop.lwjgl.setup
 com.tokelon.toktales.desktop.lwjgl.ui
 com.tokelon.toktales.desktop.render
 com.tokelon.toktales.desktop.storage
