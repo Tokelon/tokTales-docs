@@ -1,10 +1,11 @@
 com.tokelon.toktales.android.activity
 com.tokelon.toktales.android.activity.integration
 com.tokelon.toktales.android.activity.integration.engine
-com.tokelon.toktales.android.app
+com.tokelon.toktales.android.application
 com.tokelon.toktales.android.content
 com.tokelon.toktales.android.engine
 com.tokelon.toktales.android.engine.inject
+com.tokelon.toktales.android.engine.setup
 com.tokelon.toktales.android.engine.ui
 com.tokelon.toktales.android.game.renderer
 com.tokelon.toktales.android.game.state
@@ -20,6 +21,7 @@ com.tokelon.toktales.android.storage
 com.tokelon.toktales.android.test
 com.tokelon.toktales.android.test.engine.inject
 com.tokelon.toktales.android.ui
+com.tokelon.toktales.core.application
 com.tokelon.toktales.core.config
 com.tokelon.toktales.core.content
 com.tokelon.toktales.core.content.audio
@@ -49,7 +51,7 @@ com.tokelon.toktales.core.engine.input
 com.tokelon.toktales.core.engine.log
 com.tokelon.toktales.core.engine.render
 com.tokelon.toktales.core.engine.setup
-com.tokelon.toktales.core.engine.setup.scripts
+com.tokelon.toktales.core.engine.setup.steps
 com.tokelon.toktales.core.engine.storage
 com.tokelon.toktales.core.engine.ui
 com.tokelon.toktales.core.game
@@ -95,9 +97,11 @@ com.tokelon.toktales.core.test.game
 com.tokelon.toktales.core.tiled
 com.tokelon.toktales.core.util
 com.tokelon.toktales.core.values
+com.tokelon.toktales.desktop.application
 com.tokelon.toktales.desktop.content
 com.tokelon.toktales.desktop.engine
 com.tokelon.toktales.desktop.engine.inject
+com.tokelon.toktales.desktop.engine.setup
 com.tokelon.toktales.desktop.game.state
 com.tokelon.toktales.desktop.input
 com.tokelon.toktales.desktop.input.dispatch
@@ -108,8 +112,8 @@ com.tokelon.toktales.desktop.lwjgl.input
 com.tokelon.toktales.desktop.lwjgl.render
 com.tokelon.toktales.desktop.lwjgl.render.opengl
 com.tokelon.toktales.desktop.lwjgl.render.opengl.gl20
+com.tokelon.toktales.desktop.lwjgl.setup
 com.tokelon.toktales.desktop.lwjgl.ui
-com.tokelon.toktales.desktop.main
 com.tokelon.toktales.desktop.render
 com.tokelon.toktales.desktop.storage
 com.tokelon.toktales.desktop.test
