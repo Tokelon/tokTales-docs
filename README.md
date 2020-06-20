@@ -2,6 +2,12 @@
 
 > Contains API reference and other documents for **[tokTales Engine](https://github.com/Tokelon/tokTales)**.
 
+## How to Use
+
+These documents are meant to be used as the reference for this project.
+
+For more resources see **[Resource Hub](https://github.com/Tokelon/tokTales/wiki/Resources)**.
+
 ## API Reference
 
 The Javadoc generated from all **tokTales Engine** modules.
