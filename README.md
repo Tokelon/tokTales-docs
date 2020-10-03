@@ -16,6 +16,7 @@ The Javadoc generated from all **tokTales Engine** modules.
 
 - **[Nightly](https://tokelon.github.io/tokTales-docs/api-docs/nightly/javadoc/)** - The latest build version
 - **[Release](https://tokelon.github.io/tokTales-docs/api-docs/release/javadoc/)** - The latest release version
+- **[0.2.1](https://tokelon.github.io/tokTales-docs/api-docs/0.2.1/javadoc/)**
 - **[0.2.0](https://tokelon.github.io/tokTales-docs/api-docs/0.2.0/javadoc/)**
 - **[0.1.0](https://tokelon.github.io/tokTales-docs/api-docs/0.1.0/javadoc/)**
 
