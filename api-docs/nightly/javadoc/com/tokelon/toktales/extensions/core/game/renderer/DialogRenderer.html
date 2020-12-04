@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -112,7 +112,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a>, <a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">ISegmentRenderer</a>, <a href="../../../../../../../com/tokelon/toktales/extensions/core/game/renderer/IDialogRenderer.html" title="interface in com.tokelon.toktales.extensions.core.game.renderer">IDialogRenderer</a></dd>
+<dd><a href="../../../../../../../com/tokelon/toktales/core/render/IRenderContext.html" title="interface in com.tokelon.toktales.core.render">IRenderContext</a>, <a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a>, <a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISingleRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">ISingleRenderer</a>, <a href="../../../../../../../com/tokelon/toktales/extensions/core/game/renderer/IDialogRenderer.html" title="interface in com.tokelon.toktales.extensions.core.game.renderer">IDialogRenderer</a></dd>
 </dl>
 <hr>
 <br>
@@ -189,31 +189,22 @@ implements <a href="../../../../../../../com/tokelon/toktales/extensions/core/ga
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/extensions/core/game/renderer/DialogRenderer.html#drawDialog-com.tokelon.toktales.extensions.core.game.controller.IDialogController-">drawDialog</a></span>(<a href="../../../../../../../com/tokelon/toktales/extensions/core/game/controller/IDialogController.html" title="interface in com.tokelon.toktales.extensions.core.game.controller">IDialogController</a>&nbsp;dialogController)</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/extensions/core/game/renderer/DialogRenderer.html#drawFull-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">drawFull</a></span>(<a href="../../../../../../../com/tokelon/toktales/tools/core/objects/options/INamedOptions.html" title="interface in com.tokelon.toktales.tools.core.objects.options">INamedOptions</a>&nbsp;options)</code>
-<div class="block">Renderers should implement this if they can draw full without a layer index.</div>
-</td>
-</tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/extensions/core/game/renderer/DialogRenderer.html#drawLayer-com.tokelon.toktales.tools.core.objects.options.INamedOptions-java.lang.String-">drawLayer</a></span>(<a href="../../../../../../../com/tokelon/toktales/tools/core/objects/options/INamedOptions.html" title="interface in com.tokelon.toktales.tools.core.objects.options">INamedOptions</a>&nbsp;options,
-         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;layerName)</code>&nbsp;</td>
-</tr>
-<tr id="i3" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/extensions/core/game/renderer/DialogRenderer.html#onContextChanged--">onContextChanged</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i4" class="altColor">
+<tr id="i2" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/extensions/core/game/renderer/DialogRenderer.html#onContextCreated--">onContextCreated</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i5" class="rowColor">
+<tr id="i3" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/extensions/core/game/renderer/DialogRenderer.html#onContextDestroyed--">onContextDestroyed</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/extensions/core/game/renderer/DialogRenderer.html#prepare-long-">prepare</a></span>(long&nbsp;currentTimeMillis)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/extensions/core/game/renderer/DialogRenderer.html#renderContents-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">renderContents</a></span>(<a href="../../../../../../../com/tokelon/toktales/tools/core/objects/options/INamedOptions.html" title="interface in com.tokelon.toktales.tools.core.objects.options">INamedOptions</a>&nbsp;renderOptions)</code>
+<div class="block">Renders the contents of this renderer with the given options.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -231,11 +222,11 @@ implements <a href="../../../../../../../com/tokelon/toktales/extensions/core/ga
 <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.com.tokelon.toktales.core.render.renderer.IRenderer">
+<li class="blockList"><a name="methods.inherited.from.class.com.tokelon.toktales.core.render.IRenderContext">
 <!--   -->
 </a>
-<h3>Methods inherited from interface&nbsp;com.tokelon.toktales.core.render.renderer.<a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a></h3>
-<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html#contextChanged-com.tokelon.toktales.core.screen.view.IViewTransformer-org.joml.Matrix4f-">contextChanged</a>, <a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html#contextCreated--">contextCreated</a>, <a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html#contextDestroyed--">contextDestroyed</a></code></li>
+<h3>Methods inherited from interface&nbsp;com.tokelon.toktales.core.render.<a href="../../../../../../../com/tokelon/toktales/core/render/IRenderContext.html" title="interface in com.tokelon.toktales.core.render">IRenderContext</a></h3>
+<code><a href="../../../../../../../com/tokelon/toktales/core/render/IRenderContext.html#contextChanged-com.tokelon.toktales.core.screen.view.IViewTransformer-org.joml.Matrix4f-">contextChanged</a>, <a href="../../../../../../../com/tokelon/toktales/core/render/IRenderContext.html#contextCreated--">contextCreated</a>, <a href="../../../../../../../com/tokelon/toktales/core/render/IRenderContext.html#contextDestroyed--">contextDestroyed</a></code></li>
 </ul>
 </li>
 </ul>
@@ -311,45 +302,18 @@ implements <a href="../../../../../../../com/tokelon/toktales/extensions/core/ga
 </dl>
 </li>
 </ul>
-<a name="prepare-long-">
+<a name="renderContents-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>prepare</h4>
-<pre>public&nbsp;void&nbsp;prepare(long&nbsp;currentTimeMillis)</pre>
+<h4>renderContents</h4>
+<pre>public&nbsp;void&nbsp;renderContents(<a href="../../../../../../../com/tokelon/toktales/tools/core/objects/options/INamedOptions.html" title="interface in com.tokelon.toktales.tools.core.objects.options">INamedOptions</a>&nbsp;renderOptions)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISingleRenderer.html#renderContents-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">ISingleRenderer</a></code></span></div>
+<div class="block">Renders the contents of this renderer with the given options.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html#prepare-long-">prepare</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">ISegmentRenderer</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="drawLayer-com.tokelon.toktales.tools.core.objects.options.INamedOptions-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>drawLayer</h4>
-<pre>public&nbsp;void&nbsp;drawLayer(<a href="../../../../../../../com/tokelon/toktales/tools/core/objects/options/INamedOptions.html" title="interface in com.tokelon.toktales.tools.core.objects.options">INamedOptions</a>&nbsp;options,
-                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;layerName)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html#drawLayer-com.tokelon.toktales.tools.core.objects.options.INamedOptions-java.lang.String-">drawLayer</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">ISegmentRenderer</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="drawFull-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>drawFull</h4>
-<pre>public&nbsp;void&nbsp;drawFull(<a href="../../../../../../../com/tokelon/toktales/tools/core/objects/options/INamedOptions.html" title="interface in com.tokelon.toktales.tools.core.objects.options">INamedOptions</a>&nbsp;options)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html#drawFull-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">ISegmentRenderer</a></code></span></div>
-<div class="block">Renderers should implement this if they can draw full without a layer index.</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html#drawFull-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">drawFull</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">ISegmentRenderer</a></code></dd>
+<dd><code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISingleRenderer.html#renderContents-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">renderContents</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISingleRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">ISingleRenderer</a></code></dd>
 </dl>
 </li>
 </ul>

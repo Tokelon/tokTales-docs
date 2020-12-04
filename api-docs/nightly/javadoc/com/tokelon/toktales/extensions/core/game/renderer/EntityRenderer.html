@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -107,7 +107,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a>, <a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">ISegmentRenderer</a>, <a href="../../../../../../../com/tokelon/toktales/extensions/core/game/renderer/IEntityRenderer.html" title="interface in com.tokelon.toktales.extensions.core.game.renderer">IEntityRenderer</a></dd>
+<dd><a href="../../../../../../../com/tokelon/toktales/core/render/IRenderContext.html" title="interface in com.tokelon.toktales.core.render">IRenderContext</a>, <a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IMultiRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IMultiRenderer</a>, <a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a>, <a href="../../../../../../../com/tokelon/toktales/extensions/core/game/renderer/IEntityRenderer.html" title="interface in com.tokelon.toktales.extensions.core.game.renderer">IEntityRenderer</a></dd>
 </dl>
 <hr>
 <br>
@@ -227,18 +227,16 @@ implements <a href="../../../../../../../com/tokelon/toktales/extensions/core/ga
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/extensions/core/game/renderer/EntityRenderer.html#drawFull-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">drawFull</a></span>(<a href="../../../../../../../com/tokelon/toktales/tools/core/objects/options/INamedOptions.html" title="interface in com.tokelon.toktales.tools.core.objects.options">INamedOptions</a>&nbsp;options)</code>
-<div class="block">Renderers should implement this if they can draw full without a layer index.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/extensions/core/game/renderer/EntityRenderer.html#prepareFrame-long-">prepareFrame</a></span>(long&nbsp;currentTimeMillis)</code>
+<div class="block">Prepares this renderer for rendering the contents for the next frame.</div>
 </td>
 </tr>
 <tr id="i5" class="rowColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/extensions/core/game/renderer/EntityRenderer.html#drawLayer-com.tokelon.toktales.tools.core.objects.options.INamedOptions-java.lang.String-">drawLayer</a></span>(<a href="../../../../../../../com/tokelon/toktales/tools/core/objects/options/INamedOptions.html" title="interface in com.tokelon.toktales.tools.core.objects.options">INamedOptions</a>&nbsp;options,
-         <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;layerName)</code>&nbsp;</td>
-</tr>
-<tr id="i6" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/extensions/core/game/renderer/EntityRenderer.html#prepare-long-">prepare</a></span>(long&nbsp;currentTimeMillis)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/extensions/core/game/renderer/EntityRenderer.html#renderContent-java.lang.String-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">renderContent</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;contentName,
+             <a href="../../../../../../../com/tokelon/toktales/tools/core/objects/options/INamedOptions.html" title="interface in com.tokelon.toktales.tools.core.objects.options">INamedOptions</a>&nbsp;options)</code>
+<div class="block">Renders the content for the given name with the given options.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -324,13 +322,13 @@ implements <a href="../../../../../../../com/tokelon/toktales/extensions/core/ga
 <li class="blockList">
 <h4>contextCreated</h4>
 <pre>public&nbsp;void&nbsp;contextCreated()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html#contextCreated--">IRenderer</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/IRenderContext.html#contextCreated--">IRenderContext</a></code></span></div>
 <div class="block">Called when the render context has been created.
  <p>
  Low level dependencies should be initialized here.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html#contextCreated--">contextCreated</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a></code></dd>
+<dd><code><a href="../../../../../../../com/tokelon/toktales/core/render/IRenderContext.html#contextCreated--">contextCreated</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/IRenderContext.html" title="interface in com.tokelon.toktales.core.render">IRenderContext</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -342,13 +340,13 @@ implements <a href="../../../../../../../com/tokelon/toktales/extensions/core/ga
 <h4>contextChanged</h4>
 <pre>public&nbsp;void&nbsp;contextChanged(<a href="../../../../../../../com/tokelon/toktales/core/screen/view/IViewTransformer.html" title="interface in com.tokelon.toktales.core.screen.view">IViewTransformer</a>&nbsp;viewTransformer,
                            org.joml.Matrix4f&nbsp;projectionMatrix)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html#contextChanged-com.tokelon.toktales.core.screen.view.IViewTransformer-org.joml.Matrix4f-">IRenderer</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/IRenderContext.html#contextChanged-com.tokelon.toktales.core.screen.view.IViewTransformer-org.joml.Matrix4f-">IRenderContext</a></code></span></div>
 <div class="block">Called when the render context has been changed.
  <p>
  THe given view properties can be used for rendering later.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html#contextChanged-com.tokelon.toktales.core.screen.view.IViewTransformer-org.joml.Matrix4f-">contextChanged</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a></code></dd>
+<dd><code><a href="../../../../../../../com/tokelon/toktales/core/render/IRenderContext.html#contextChanged-com.tokelon.toktales.core.screen.view.IViewTransformer-org.joml.Matrix4f-">contextChanged</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/IRenderContext.html" title="interface in com.tokelon.toktales.core.render">IRenderContext</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>viewTransformer</code> - The view transformer used for rendering.</dd>
 <dd><code>projectionMatrix</code> - The projection matrix used for rendering.</dd>
@@ -362,55 +360,48 @@ implements <a href="../../../../../../../com/tokelon/toktales/extensions/core/ga
 <li class="blockList">
 <h4>contextDestroyed</h4>
 <pre>public&nbsp;void&nbsp;contextDestroyed()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html#contextDestroyed--">IRenderer</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/IRenderContext.html#contextDestroyed--">IRenderContext</a></code></span></div>
 <div class="block">Called when the render context has been destroyed.
  <p>
  Low level dependencies should be disposed here.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html#contextDestroyed--">contextDestroyed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a></code></dd>
+<dd><code><a href="../../../../../../../com/tokelon/toktales/core/render/IRenderContext.html#contextDestroyed--">contextDestroyed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/IRenderContext.html" title="interface in com.tokelon.toktales.core.render">IRenderContext</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="prepare-long-">
+<a name="prepareFrame-long-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>prepare</h4>
-<pre>public&nbsp;void&nbsp;prepare(long&nbsp;currentTimeMillis)</pre>
+<h4>prepareFrame</h4>
+<pre>public&nbsp;void&nbsp;prepareFrame(long&nbsp;currentTimeMillis)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IMultiRenderer.html#prepareFrame-long-">IMultiRenderer</a></code></span></div>
+<div class="block">Prepares this renderer for rendering the contents for the next frame.
+ <p>
+ Must be called once per frame, before all other render calls.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html#prepare-long-">prepare</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">ISegmentRenderer</a></code></dd>
+<dd><code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IMultiRenderer.html#prepareFrame-long-">prepareFrame</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IMultiRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IMultiRenderer</a></code></dd>
 </dl>
 </li>
 </ul>
-<a name="drawLayer-com.tokelon.toktales.tools.core.objects.options.INamedOptions-java.lang.String-">
+<a name="renderContent-java.lang.String-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>drawLayer</h4>
-<pre>public&nbsp;void&nbsp;drawLayer(<a href="../../../../../../../com/tokelon/toktales/tools/core/objects/options/INamedOptions.html" title="interface in com.tokelon.toktales.tools.core.objects.options">INamedOptions</a>&nbsp;options,
-                      <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;layerName)</pre>
+<h4>renderContent</h4>
+<pre>public&nbsp;void&nbsp;renderContent(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;contentName,
+                          <a href="../../../../../../../com/tokelon/toktales/tools/core/objects/options/INamedOptions.html" title="interface in com.tokelon.toktales.tools.core.objects.options">INamedOptions</a>&nbsp;options)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IMultiRenderer.html#renderContent-java.lang.String-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">IMultiRenderer</a></code></span></div>
+<div class="block">Renders the content for the given name with the given options.
+ <p>
+ If there is no content for that name, does nothing.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html#drawLayer-com.tokelon.toktales.tools.core.objects.options.INamedOptions-java.lang.String-">drawLayer</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">ISegmentRenderer</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="drawFull-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>drawFull</h4>
-<pre>public&nbsp;void&nbsp;drawFull(<a href="../../../../../../../com/tokelon/toktales/tools/core/objects/options/INamedOptions.html" title="interface in com.tokelon.toktales.tools.core.objects.options">INamedOptions</a>&nbsp;options)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html#drawFull-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">ISegmentRenderer</a></code></span></div>
-<div class="block">Renderers should implement this if they can draw full without a layer index.</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html#drawFull-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">drawFull</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">ISegmentRenderer</a></code></dd>
+<dd><code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IMultiRenderer.html#renderContent-java.lang.String-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">renderContent</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IMultiRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IMultiRenderer</a></code></dd>
 </dl>
 </li>
 </ul>

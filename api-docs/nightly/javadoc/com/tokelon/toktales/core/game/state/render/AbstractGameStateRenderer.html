@@ -107,7 +107,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a>, <a href="../../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a>, <a href="../../../../../../../com/tokelon/toktales/core/screen/surface/ISurfaceManager.ISurfaceCallback.html" title="interface in com.tokelon.toktales.core.screen.surface">ISurfaceManager.ISurfaceCallback</a></dd>
+<dd><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a>, <a href="../../../../../../../com/tokelon/toktales/core/screen/surface/ISurfaceManager.ISurfaceCallback.html" title="interface in com.tokelon.toktales.core.screen.surface">ISurfaceManager.ISurfaceCallback</a></dd>
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
@@ -117,7 +117,7 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>public abstract class <span class="typeNameLabel">AbstractGameStateRenderer</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
-implements <a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></pre>
+implements <a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a>, <a href="../../../../../../../com/tokelon/toktales/core/screen/surface/ISurfaceManager.ISurfaceCallback.html" title="interface in com.tokelon.toktales.core.screen.surface">ISurfaceManager.ISurfaceCallback</a></pre>
 </li>
 </ul>
 </div>
@@ -154,9 +154,8 @@ implements <a href="../../../../../../../com/tokelon/toktales/core/game/state/re
 <th class="colLast" scope="col">Method and Description</th>
 </tr>
 <tr id="i0" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#addManagedRenderer-java.lang.String-com.tokelon.toktales.core.render.renderer.IRenderer-">addManagedRenderer</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                  <a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a>&nbsp;renderer)</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../../../../com/tokelon/toktales/core/render/IRenderContextManager.html" title="interface in com.tokelon.toktales.core.render">IRenderContextManager</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getContextManager--">getContextManager</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i1" class="rowColor">
 <td class="colFirst"><code>protected <a href="../../../../../../../com/tokelon/toktales/core/screen/view/IScreenViewport.html" title="interface in com.tokelon.toktales.core.screen.view">IScreenViewport</a></code></td>
@@ -167,36 +166,43 @@ implements <a href="../../../../../../../com/tokelon/toktales/core/game/state/re
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getCurrentCamera--">getCurrentCamera</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getManagedRenderer-java.lang.String-">getManagedRenderer</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
-</tr>
-<tr id="i4" class="altColor">
 <td class="colFirst"><code>protected org.joml.Matrix4f</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getProjectionMatrix--">getProjectionMatrix</a></span>()</code>&nbsp;</td>
 </tr>
+<tr id="i4" class="altColor">
+<td class="colFirst"><code><a href="../../../../../../../com/tokelon/toktales/core/render/IRenderCall.html" title="interface in com.tokelon.toktales.core.render">IRenderCall</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getRenderCall-java.lang.String-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">getRenderCall</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;contentName,
+             <a href="../../../../../../../com/tokelon/toktales/tools/core/objects/options/INamedOptions.html" title="interface in com.tokelon.toktales.tools.core.objects.options">INamedOptions</a>&nbsp;renderOptions)</code>
+<div class="block">Returns an optional render call for the given name.</div>
+</td>
+</tr>
 <tr id="i5" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../../com/tokelon/toktales/core/render/order/IRenderOrder.html" title="interface in com.tokelon.toktales.core.render.order">IRenderOrder</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getRenderOrder--">getRenderOrder</a></span>()</code>
+<div class="block">Returns the render order for this renderer.</div>
+</td>
+</tr>
+<tr id="i6" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../../com/tokelon/toktales/core/screen/surface/ISurface.html" title="interface in com.tokelon.toktales.core.screen.surface">ISurface</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getSurface--">getSurface</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i6" class="altColor">
+<tr id="i7" class="rowColor">
+<td class="colFirst"><code><a href="../../../../../../../com/tokelon/toktales/core/screen/surface/ISurfaceManager.ISurfaceCallback.html" title="interface in com.tokelon.toktales.core.screen.surface">ISurfaceManager.ISurfaceCallback</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getSurfaceCallback--">getSurfaceCallback</a></span>()</code>&nbsp;</td>
+</tr>
+<tr id="i8" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../../com/tokelon/toktales/core/render/texture/ITextureCoordinator.html" title="interface in com.tokelon.toktales.core.render.texture">ITextureCoordinator</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getTextureCoordinator--">getTextureCoordinator</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i7" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../../com/tokelon/toktales/core/screen/view/IViewTransformer.html" title="interface in com.tokelon.toktales.core.screen.view">IViewTransformer</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getViewTransformer--">getViewTransformer</a></span>()</code>&nbsp;</td>
-</tr>
-<tr id="i8" class="altColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#hasManagedRenderer-java.lang.String-">hasManagedRenderer</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
-</tr>
 <tr id="i9" class="rowColor">
-<td class="colFirst"><code>boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#hasSurface--">hasSurface</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code><a href="../../../../../../../com/tokelon/toktales/core/screen/view/IViewTransformer.html" title="interface in com.tokelon.toktales.core.screen.view">IViewTransformer</a></code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getViewTransformer--">getViewTransformer</a></span>()</code>
+<div class="block">Returns the current view transformer that is used as the main view transformer.</div>
+</td>
 </tr>
 <tr id="i10" class="altColor">
-<td class="colFirst"><code>protected boolean</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#hasView--">hasView</a></span>()</code>&nbsp;</td>
+<td class="colFirst"><code>boolean</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#hasSurface--">hasSurface</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i11" class="rowColor">
 <td class="colFirst"><code>protected abstract void</code></td>
@@ -211,8 +217,10 @@ implements <a href="../../../../../../../com/tokelon/toktales/core/game/state/re
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#onSurfaceDestroyed--">onSurfaceDestroyed</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i14" class="altColor">
-<td class="colFirst"><code><a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#removeManagedRenderer-java.lang.String-">removeManagedRenderer</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>&nbsp;</td>
+<td class="colFirst"><code>void</code></td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#renderState--">renderState</a></span>()</code>
+<div class="block">Renders the state this renderer is assigned to.</div>
+</td>
 </tr>
 <tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
@@ -228,7 +236,9 @@ implements <a href="../../../../../../../com/tokelon/toktales/core/game/state/re
 </tr>
 <tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#updateCamera-com.tokelon.toktales.core.game.model.ICamera-">updateCamera</a></span>(<a href="../../../../../../../com/tokelon/toktales/core/game/model/ICamera.html" title="interface in com.tokelon.toktales.core.game.model">ICamera</a>&nbsp;camera)</code>&nbsp;</td>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#updateCamera-com.tokelon.toktales.core.game.model.ICamera-">updateCamera</a></span>(<a href="../../../../../../../com/tokelon/toktales/core/game/model/ICamera.html" title="interface in com.tokelon.toktales.core.game.model">ICamera</a>&nbsp;camera)</code>
+<div class="block">Sets the camera that should be used for rendering.</div>
+</td>
 </tr>
 </table>
 <ul class="blockList">
@@ -237,13 +247,6 @@ implements <a href="../../../../../../../com/tokelon/toktales/core/game/state/re
 </a>
 <h3>Methods inherited from class&nbsp;java.lang.<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a></h3>
 <code><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#clone--" title="class or interface in java.lang">clone</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#equals-java.lang.Object-" title="class or interface in java.lang">equals</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#finalize--" title="class or interface in java.lang">finalize</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#getClass--" title="class or interface in java.lang">getClass</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#hashCode--" title="class or interface in java.lang">hashCode</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notify--" title="class or interface in java.lang">notify</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#notifyAll--" title="class or interface in java.lang">notifyAll</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#toString--" title="class or interface in java.lang">toString</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait--" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-" title="class or interface in java.lang">wait</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true#wait-long-int-" title="class or interface in java.lang">wait</a></code></li>
-</ul>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.com.tokelon.toktales.core.render.order.IRenderCallback">
-<!--   -->
-</a>
-<h3>Methods inherited from interface&nbsp;com.tokelon.toktales.core.render.order.<a href="../../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a></h3>
-<code><a href="../../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html#getDescription--">getDescription</a>, <a href="../../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html#renderCall-java.lang.String-double-">renderCall</a></code></li>
 </ul>
 </li>
 </ul>
@@ -276,15 +279,6 @@ implements <a href="../../../../../../../com/tokelon/toktales/core/game/state/re
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="hasView--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>hasView</h4>
-<pre>protected&nbsp;boolean&nbsp;hasView()</pre>
-</li>
-</ul>
 <a name="getContextViewport--">
 <!--   -->
 </a>
@@ -330,59 +324,6 @@ implements <a href="../../../../../../../com/tokelon/toktales/core/game/state/re
 <pre>protected abstract&nbsp;void&nbsp;onSurfaceDestroyed()</pre>
 </li>
 </ul>
-<a name="addManagedRenderer-java.lang.String-com.tokelon.toktales.core.render.renderer.IRenderer-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>addManagedRenderer</h4>
-<pre>public&nbsp;void&nbsp;addManagedRenderer(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name,
-                               <a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a>&nbsp;renderer)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#addManagedRenderer-java.lang.String-com.tokelon.toktales.core.render.renderer.IRenderer-">addManagedRenderer</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="getManagedRenderer-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getManagedRenderer</h4>
-<pre>public&nbsp;<a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a>&nbsp;getManagedRenderer(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getManagedRenderer-java.lang.String-">getManagedRenderer</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="removeManagedRenderer-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>removeManagedRenderer</h4>
-<pre>public&nbsp;<a href="../../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a>&nbsp;removeManagedRenderer(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#removeManagedRenderer-java.lang.String-">removeManagedRenderer</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></code></dd>
-</dl>
-</li>
-</ul>
-<a name="hasManagedRenderer-java.lang.String-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>hasManagedRenderer</h4>
-<pre>public&nbsp;boolean&nbsp;hasManagedRenderer(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</pre>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#hasManagedRenderer-java.lang.String-">hasManagedRenderer</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></code></dd>
-</dl>
-</li>
-</ul>
 <a name="updateCamera-com.tokelon.toktales.core.game.model.ICamera-">
 <!--   -->
 </a>
@@ -390,6 +331,8 @@ implements <a href="../../../../../../../com/tokelon/toktales/core/game/state/re
 <li class="blockList">
 <h4>updateCamera</h4>
 <pre>public&nbsp;void&nbsp;updateCamera(<a href="../../../../../../../com/tokelon/toktales/core/game/model/ICamera.html" title="interface in com.tokelon.toktales.core.game.model">ICamera</a>&nbsp;camera)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#updateCamera-com.tokelon.toktales.core.game.model.ICamera-">IGameStateRenderer</a></code></span></div>
+<div class="block">Sets the camera that should be used for rendering.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#updateCamera-com.tokelon.toktales.core.game.model.ICamera-">updateCamera</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></code></dd>
@@ -406,6 +349,8 @@ implements <a href="../../../../../../../com/tokelon/toktales/core/game/state/re
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getCurrentCamera--">getCurrentCamera</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The current camera.</dd>
 </dl>
 </li>
 </ul>
@@ -416,9 +361,13 @@ implements <a href="../../../../../../../com/tokelon/toktales/core/game/state/re
 <li class="blockList">
 <h4>getViewTransformer</h4>
 <pre>public&nbsp;<a href="../../../../../../../com/tokelon/toktales/core/screen/view/IViewTransformer.html" title="interface in com.tokelon.toktales.core.screen.view">IViewTransformer</a>&nbsp;getViewTransformer()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getViewTransformer--">IGameStateRenderer</a></code></span></div>
+<div class="block">Returns the current view transformer that is used as the main view transformer.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getViewTransformer--">getViewTransformer</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>A view transformer.</dd>
 </dl>
 </li>
 </ul>
@@ -432,6 +381,55 @@ implements <a href="../../../../../../../com/tokelon/toktales/core/game/state/re
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
 <dd><code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getTextureCoordinator--">getTextureCoordinator</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The texture coordinator for this state renderer.</dd>
+</dl>
+</li>
+</ul>
+<a name="getContextManager--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getContextManager</h4>
+<pre>public&nbsp;<a href="../../../../../../../com/tokelon/toktales/core/render/IRenderContextManager.html" title="interface in com.tokelon.toktales.core.render">IRenderContextManager</a>&nbsp;getContextManager()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getContextManager--">getContextManager</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The context manager for this state renderer.</dd>
+</dl>
+</li>
+</ul>
+<a name="getSurfaceCallback--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getSurfaceCallback</h4>
+<pre>public&nbsp;<a href="../../../../../../../com/tokelon/toktales/core/screen/surface/ISurfaceManager.ISurfaceCallback.html" title="interface in com.tokelon.toktales.core.screen.surface">ISurfaceManager.ISurfaceCallback</a>&nbsp;getSurfaceCallback()</pre>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getSurfaceCallback--">getSurfaceCallback</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>The surface callback for this state renderer, or null if there is none.</dd>
+</dl>
+</li>
+</ul>
+<a name="getRenderOrder--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRenderOrder</h4>
+<pre>public&nbsp;<a href="../../../../../../../com/tokelon/toktales/core/render/order/IRenderOrder.html" title="interface in com.tokelon.toktales.core.render.order">IRenderOrder</a>&nbsp;getRenderOrder()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getRenderOrder--">IGameStateRenderer</a></code></span></div>
+<div class="block">Returns the render order for this renderer.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getRenderOrder--">getRenderOrder</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>A render order.</dd>
 </dl>
 </li>
 </ul>
@@ -462,6 +460,39 @@ implements <a href="../../../../../../../com/tokelon/toktales/core/game/state/re
 <dd><code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getSurface--">getSurface</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The current surface, or null if there is none.</dd>
+</dl>
+</li>
+</ul>
+<a name="getRenderCall-java.lang.String-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>getRenderCall</h4>
+<pre>public&nbsp;<a href="../../../../../../../com/tokelon/toktales/core/render/IRenderCall.html" title="interface in com.tokelon.toktales.core.render">IRenderCall</a>&nbsp;getRenderCall(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;contentName,
+                                 <a href="../../../../../../../com/tokelon/toktales/tools/core/objects/options/INamedOptions.html" title="interface in com.tokelon.toktales.tools.core.objects.options">INamedOptions</a>&nbsp;renderOptions)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getRenderCall-java.lang.String-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">IGameStateRenderer</a></code></span></div>
+<div class="block">Returns an optional render call for the given name.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getRenderCall-java.lang.String-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">getRenderCall</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></code></dd>
+<dt><span class="returnLabel">Returns:</span></dt>
+<dd>A render call for the given name.</dd>
+</dl>
+</li>
+</ul>
+<a name="renderState--">
+<!--   -->
+</a>
+<ul class="blockList">
+<li class="blockList">
+<h4>renderState</h4>
+<pre>public&nbsp;void&nbsp;renderState()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#renderState--">IGameStateRenderer</a></code></span></div>
+<div class="block">Renders the state this renderer is assigned to.</div>
+<dl>
+<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
+<dd><code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#renderState--">renderState</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></code></dd>
 </dl>
 </li>
 </ul>

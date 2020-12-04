@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":10,"i43":10,"i44":10,"i45":10,"i46":10,"i47":10,"i48":10,"i49":10,"i50":10,"i51":10,"i52":10};
+var methods = {"i0":10,"i1":10,"i2":10,"i3":10,"i4":10,"i5":10,"i6":10,"i7":10,"i8":10,"i9":10,"i10":10,"i11":10,"i12":10,"i13":10,"i14":10,"i15":10,"i16":10,"i17":10,"i18":10,"i19":10,"i20":10,"i21":10,"i22":10,"i23":10,"i24":10,"i25":10,"i26":10,"i27":10,"i28":10,"i29":10,"i30":10,"i31":10,"i32":10,"i33":10,"i34":10,"i35":10,"i36":10,"i37":10,"i38":10,"i39":10,"i40":10,"i41":10,"i42":10,"i43":10,"i44":10,"i45":10,"i46":10,"i47":10,"i48":10,"i49":10,"i50":10,"i51":10};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],8:["t4","Concrete Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -129,7 +129,7 @@ implements <a href="../../../../../../com/tokelon/toktales/core/game/state/IType
  <br>- If needed there are hooks for <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#afterInitBaseDependencies--"><code>afterInitBaseDependencies()</code></a> and <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#afterInitStateDependencies--"><code>afterInitStateDependencies()</code></a>.
  <br>- Override <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#getSceneControl--"><code>getSceneControl()</code></a> to return your custom scene control and use the helper <code>#assignSceneGeneric</code>.
  <br>- Override <code>#getTag()</code> and return your own tag to trace logs to the actual gamestate implementation.
- <br>- The default <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#onRender--"><code>onRender()</code></a> implementation will draw using <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#getRenderOrder--"><code>getRenderOrder()</code></a>.</div>
+ <br>- The default <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#onRender--"><code>onRender()</code></a> implementation will draw using <code>#getRenderOrder()</code>.</div>
 </li>
 </ul>
 </div>
@@ -251,7 +251,7 @@ implements <a href="../../../../../../com/tokelon/toktales/core/game/state/IType
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#afterDependencyInjection--">afterDependencyInjection</a></span>()</code>
-<div class="block">Called after dependencies have been injected, during <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.render.order.IRenderOrder-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-"><code>injectDependencies(com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory, com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory, com.tokelon.toktales.core.render.order.IRenderOrder, com.tokelon.toktales.core.engine.IEngineContext, com.tokelon.toktales.core.game.state.IGameStateInput, com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory, com.tokelon.toktales.core.game.state.render.IGameStateRenderer, com.tokelon.toktales.core.game.state.IGameStateInputHandler, com.tokelon.toktales.core.game.state.IControlScheme, com.tokelon.toktales.core.game.state.IControlHandler)</code></a>.</div>
+<div class="block">Called after dependencies have been injected, during <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-"><code>injectDependencies(com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory, com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory, com.tokelon.toktales.core.engine.IEngineContext, com.tokelon.toktales.core.game.state.IGameStateInput, com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory, com.tokelon.toktales.core.game.state.render.IGameStateRenderer, com.tokelon.toktales.core.game.state.IGameStateInputHandler, com.tokelon.toktales.core.game.state.IControlScheme, com.tokelon.toktales.core.game.state.IControlHandler)</code></a>.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
@@ -269,7 +269,7 @@ implements <a href="../../../../../../com/tokelon/toktales/core/game/state/IType
 <tr id="i3" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#afterInjectDependencies--">afterInjectDependencies</a></span>()</code>
-<div class="block">Called after <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.render.order.IRenderOrder-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-"><code>injectDependencies(com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory, com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory, com.tokelon.toktales.core.render.order.IRenderOrder, com.tokelon.toktales.core.engine.IEngineContext, com.tokelon.toktales.core.game.state.IGameStateInput, com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory, com.tokelon.toktales.core.game.state.render.IGameStateRenderer, com.tokelon.toktales.core.game.state.IGameStateInputHandler, com.tokelon.toktales.core.game.state.IControlScheme, com.tokelon.toktales.core.game.state.IControlHandler)</code></a> has run (at the end of it).</div>
+<div class="block">Called after <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-"><code>injectDependencies(com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory, com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory, com.tokelon.toktales.core.engine.IEngineContext, com.tokelon.toktales.core.game.state.IGameStateInput, com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory, com.tokelon.toktales.core.game.state.render.IGameStateRenderer, com.tokelon.toktales.core.game.state.IGameStateInputHandler, com.tokelon.toktales.core.game.state.IControlScheme, com.tokelon.toktales.core.game.state.IControlHandler)</code></a> has run (at the end of it).</div>
 </td>
 </tr>
 <tr id="i4" class="altColor">
@@ -374,70 +374,64 @@ implements <a href="../../../../../../com/tokelon/toktales/core/game/state/IType
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#getLogging--">getLogging</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i22" class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderOrder.html" title="interface in com.tokelon.toktales.core.render.order">IRenderOrder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#getRenderOrder--">getRenderOrder</a></span>()</code>
-<div class="block">Returns the render order for this state.</div>
-</td>
-</tr>
-<tr id="i23" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/tokelon/toktales/core/game/state/scene/IGameSceneControl.IModifiableGameSceneControl.html" title="interface in com.tokelon.toktales.core.game.state.scene">IGameSceneControl.IModifiableGameSceneControl</a>&lt;<a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html" title="type parameter in BaseGamestate">T</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#getSceneControl--">getSceneControl</a></span>()</code>
 <div class="block">You can override this method to return a custom scene control type.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>protected javax.inject.Provider&lt;? extends <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html" title="type parameter in BaseGamestate">T</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#getSceneProvider--">getSceneProvider</a></span>()</code>
 <div class="block">Returns the scene provider for this state.</div>
 </td>
 </tr>
-<tr id="i25" class="rowColor">
+<tr id="i24" class="altColor">
 <td class="colFirst"><code>protected <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html?is-external=true" title="class or interface in java.lang">Class</a>&lt;? super <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html" title="type parameter in BaseGamestate">T</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#getSceneTypeClass--">getSceneTypeClass</a></span>()</code>
 <div class="block">Returns a class representing the raw type of this state's scenes.</div>
 </td>
 </tr>
-<tr id="i26" class="altColor">
+<tr id="i25" class="rowColor">
 <td class="colFirst"><code>protected <a href="https://guava.dev/releases/29.0-android/api/docs/com/google/common/reflect/TypeToken.html?is-external=true" title="class or interface in com.google.common.reflect">TypeToken</a>&lt;<a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html" title="type parameter in BaseGamestate">T</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#getSceneTypeToken--">getSceneTypeToken</a></span>()</code>
 <div class="block">Returns the type token for this state's scene type.</div>
 </td>
 </tr>
-<tr id="i27" class="rowColor">
+<tr id="i26" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/tokelon/toktales/core/game/state/IControlHandler.html" title="interface in com.tokelon.toktales.core.game.state">IControlHandler</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#getStateControlHandler--">getStateControlHandler</a></span>()</code>
 <div class="block">The control handler handles all actions it is given,
  and is normally used by the state input handler for this reason.</div>
 </td>
 </tr>
-<tr id="i28" class="altColor">
+<tr id="i27" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/tokelon/toktales/core/game/state/IControlScheme.html" title="interface in com.tokelon.toktales.core.game.state">IControlScheme</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#getStateControlScheme--">getStateControlScheme</a></span>()</code>
 <div class="block">The control scheme provides a mapping from inputs to actions,
  and is used by the state input handler for this reason.</div>
 </td>
 </tr>
-<tr id="i29" class="rowColor">
+<tr id="i28" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameStateInput.html" title="interface in com.tokelon.toktales.core.game.state">IGameStateInput</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#getStateInput--">getStateInput</a></span>()</code>
 <div class="block">The state input is a manager that collects input handlers,
   and notifies them when new events happen.</div>
 </td>
 </tr>
-<tr id="i30" class="altColor">
+<tr id="i29" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameStateInputHandler.html" title="interface in com.tokelon.toktales.core.game.state">IGameStateInputHandler</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#getStateInputHandler--">getStateInputHandler</a></span>()</code>
 <div class="block">The state input handler is the default way of processing state related events,
  and transforming them into actions on the gamestate or gamescene.</div>
 </td>
 </tr>
-<tr id="i31" class="rowColor">
+<tr id="i30" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#getStateRenderer--">getStateRenderer</a></span>()</code>
 <div class="block">Returns the state renderer for this state.</div>
 </td>
 </tr>
-<tr id="i32" class="altColor">
+<tr id="i31" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#initBaseDependencies-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-javax.inject.Provider-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IModifiableGameSceneControl-">initBaseDependencies</a></span>(<a href="../../../../../../com/tokelon/toktales/core/engine/IEngineContext.html" title="interface in com.tokelon.toktales.core.engine">IEngineContext</a>&nbsp;defaultEngineContext,
                     <a href="../../../../../../com/tokelon/toktales/core/game/state/IGameStateInput.html" title="interface in com.tokelon.toktales.core.game.state">IGameStateInput</a>&nbsp;defaultGamestateInput,
@@ -446,7 +440,7 @@ implements <a href="../../../../../../com/tokelon/toktales/core/game/state/IType
 <div class="block">Initializes the base dependencies.</div>
 </td>
 </tr>
-<tr id="i33" class="rowColor">
+<tr id="i32" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#initStateDependencies-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-">initStateDependencies</a></span>(<a href="../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a>&nbsp;defaultRender,
                      <a href="../../../../../../com/tokelon/toktales/core/game/state/IGameStateInputHandler.html" title="interface in com.tokelon.toktales.core.game.state">IGameStateInputHandler</a>&nbsp;defaultInputHandler,
@@ -455,11 +449,10 @@ implements <a href="../../../../../../com/tokelon/toktales/core/game/state/IType
 <div class="block">Initializes the state dependencies.</div>
 </td>
 </tr>
-<tr id="i34" class="altColor">
+<tr id="i33" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.render.order.IRenderOrder-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-">injectDependencies</a></span>(<a href="../../../../../../com/tokelon/toktales/tools/core/inject/parameter/IParameterInjector.IParameterInjectorFactory.html" title="interface in com.tokelon.toktales.tools.core.inject.parameter">IParameterInjector.IParameterInjectorFactory</a>&nbsp;parameterInjectorFactory,
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-">injectDependencies</a></span>(<a href="../../../../../../com/tokelon/toktales/tools/core/inject/parameter/IParameterInjector.IParameterInjectorFactory.html" title="interface in com.tokelon.toktales.tools.core.inject.parameter">IParameterInjector.IParameterInjectorFactory</a>&nbsp;parameterInjectorFactory,
                   <a href="../../../../../../com/tokelon/toktales/core/game/state/integration/IGameStateIntegrator.IGameStateIntegratorFactory.html" title="interface in com.tokelon.toktales.core.game.state.integration">IGameStateIntegrator.IGameStateIntegratorFactory</a>&nbsp;gamestateIntegratorFactory,
-                  <a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderOrder.html" title="interface in com.tokelon.toktales.core.render.order">IRenderOrder</a>&nbsp;renderOrder,
                   <a href="../../../../../../com/tokelon/toktales/core/engine/IEngineContext.html" title="interface in com.tokelon.toktales.core.engine">IEngineContext</a>&nbsp;engineContext,
                   <a href="../../../../../../com/tokelon/toktales/core/game/state/IGameStateInput.html" title="interface in com.tokelon.toktales.core.game.state">IGameStateInput</a>&nbsp;gamestateInput,
                   <a href="../../../../../../com/tokelon/toktales/core/game/state/scene/IGameSceneControl.IGameSceneControlFactory.html" title="interface in com.tokelon.toktales.core.game.state.scene">IGameSceneControl.IGameSceneControlFactory</a>&nbsp;gamesceneControlFactory,
@@ -470,107 +463,107 @@ implements <a href="../../../../../../com/tokelon/toktales/core/game/state/IType
 <div class="block">Injects all dependencies for a state and object initialization.</div>
 </td>
 </tr>
-<tr id="i35" class="rowColor">
+<tr id="i34" class="altColor">
 <td class="colFirst"><code>protected boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#isTypeValidForInjection-com.google.common.reflect.TypeToken-">isTypeValidForInjection</a></span>(<a href="https://guava.dev/releases/29.0-android/api/docs/com/google/common/reflect/TypeToken.html?is-external=true" title="class or interface in com.google.common.reflect">TypeToken</a>&lt;<a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html" title="type parameter in BaseGamestate">T</a>&gt;&nbsp;token)</code>
 <div class="block">Returns whether the type of the given type token can be injected.</div>
 </td>
 </tr>
-<tr id="i36" class="altColor">
+<tr id="i35" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#onDisengage--">onDisengage</a></span>()</code>
 <div class="block">Called when the state is removed from the state control.</div>
 </td>
 </tr>
-<tr id="i37" class="rowColor">
+<tr id="i36" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#onEngage--">onEngage</a></span>()</code>
 <div class="block">Called when the state is added to the state control.</div>
 </td>
 </tr>
-<tr id="i38" class="altColor">
+<tr id="i37" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#onEnter--">onEnter</a></span>()</code>
 <div class="block">Called when the state becomes the active state.</div>
 </td>
 </tr>
-<tr id="i39" class="rowColor">
+<tr id="i38" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#onExit--">onExit</a></span>()</code>
 <div class="block">Called when the state stops being the active state.</div>
 </td>
 </tr>
-<tr id="i40" class="altColor">
+<tr id="i39" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#onPause--">onPause</a></span>()</code>
 <div class="block">Called when the state is paused.</div>
 </td>
 </tr>
-<tr id="i41" class="rowColor">
+<tr id="i40" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#onRender--">onRender</a></span>()</code>
 <div class="block">Called to render the state.</div>
 </td>
 </tr>
-<tr id="i42" class="altColor">
+<tr id="i41" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#onResume--">onResume</a></span>()</code>
 <div class="block">Called when the state is resumed.</div>
 </td>
 </tr>
-<tr id="i43" class="rowColor">
+<tr id="i42" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#onSurfaceChanged-com.tokelon.toktales.core.screen.surface.ISurface-">onSurfaceChanged</a></span>(<a href="../../../../../../com/tokelon/toktales/core/screen/surface/ISurface.html" title="interface in com.tokelon.toktales.core.screen.surface">ISurface</a>&nbsp;surface)</code>
 <div class="block">Called when a surface is changed.</div>
 </td>
 </tr>
-<tr id="i44" class="altColor">
+<tr id="i43" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#onSurfaceCreated-com.tokelon.toktales.core.screen.surface.ISurface-">onSurfaceCreated</a></span>(<a href="../../../../../../com/tokelon/toktales/core/screen/surface/ISurface.html" title="interface in com.tokelon.toktales.core.screen.surface">ISurface</a>&nbsp;surface)</code>
 <div class="block">Called when a surface is created.</div>
 </td>
 </tr>
-<tr id="i45" class="rowColor">
+<tr id="i44" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#onSurfaceDestroyed-com.tokelon.toktales.core.screen.surface.ISurface-">onSurfaceDestroyed</a></span>(<a href="../../../../../../com/tokelon/toktales/core/screen/surface/ISurface.html" title="interface in com.tokelon.toktales.core.screen.surface">ISurface</a>&nbsp;surface)</code>
 <div class="block">Called when a surface is destroyed.</div>
 </td>
 </tr>
-<tr id="i46" class="altColor">
+<tr id="i45" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#onUpdate-long-">onUpdate</a></span>(long&nbsp;timeMillis)</code>
 <div class="block">Called to update the state.</div>
 </td>
 </tr>
-<tr id="i47" class="rowColor">
+<tr id="i46" class="altColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#removeScene-java.lang.String-">removeScene</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Removes the scene for the given name if it exists.</div>
 </td>
 </tr>
-<tr id="i48" class="altColor">
+<tr id="i47" class="rowColor">
 <td class="colFirst"><code>protected <a href="https://guava.dev/releases/29.0-android/api/docs/com/google/common/reflect/TypeToken.html?is-external=true" title="class or interface in com.google.common.reflect">TypeToken</a>&lt;<a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html" title="type parameter in BaseGamestate">T</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#resolveSceneTypeFromStateContext--">resolveSceneTypeFromStateContext</a></span>()</code>&nbsp;</td>
 </tr>
-<tr id="i49" class="rowColor">
+<tr id="i48" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#setStateControlHandler-com.tokelon.toktales.core.game.state.IControlHandler-">setStateControlHandler</a></span>(<a href="../../../../../../com/tokelon/toktales/core/game/state/IControlHandler.html" title="interface in com.tokelon.toktales.core.game.state">IControlHandler</a>&nbsp;controlHandler)</code>
 <div class="block">Sets the state control handler.</div>
 </td>
 </tr>
-<tr id="i50" class="altColor">
+<tr id="i49" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#setStateControlScheme-com.tokelon.toktales.core.game.state.IControlScheme-">setStateControlScheme</a></span>(<a href="../../../../../../com/tokelon/toktales/core/game/state/IControlScheme.html" title="interface in com.tokelon.toktales.core.game.state">IControlScheme</a>&nbsp;controlScheme)</code>
 <div class="block">Sets the state control scheme.</div>
 </td>
 </tr>
-<tr id="i51" class="rowColor">
+<tr id="i50" class="altColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#setStateInputHandler-com.tokelon.toktales.core.game.state.IGameStateInputHandler-">setStateInputHandler</a></span>(<a href="../../../../../../com/tokelon/toktales/core/game/state/IGameStateInputHandler.html" title="interface in com.tokelon.toktales.core.game.state">IGameStateInputHandler</a>&nbsp;inputHandler)</code>
 <div class="block">Sets the state input handler.</div>
 </td>
 </tr>
-<tr id="i52" class="altColor">
+<tr id="i51" class="rowColor">
 <td class="colFirst"><code>protected void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#setStateRenderer-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-">setStateRenderer</a></span>(<a href="../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a>&nbsp;renderer)</code>
 <div class="block">Sets the state render.</div>
@@ -813,7 +806,7 @@ protected&nbsp;BaseGamestate()</pre>
 </dl>
 </li>
 </ul>
-<a name="injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.render.order.IRenderOrder-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-">
+<a name="injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-">
 <!--   -->
 </a>
 <ul class="blockList">
@@ -822,7 +815,6 @@ protected&nbsp;BaseGamestate()</pre>
 <pre>@Inject
 protected&nbsp;void&nbsp;injectDependencies(<a href="../../../../../../com/tokelon/toktales/tools/core/inject/parameter/IParameterInjector.IParameterInjectorFactory.html" title="interface in com.tokelon.toktales.tools.core.inject.parameter">IParameterInjector.IParameterInjectorFactory</a>&nbsp;parameterInjectorFactory,
                                           <a href="../../../../../../com/tokelon/toktales/core/game/state/integration/IGameStateIntegrator.IGameStateIntegratorFactory.html" title="interface in com.tokelon.toktales.core.game.state.integration">IGameStateIntegrator.IGameStateIntegratorFactory</a>&nbsp;gamestateIntegratorFactory,
-                                          <a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderOrder.html" title="interface in com.tokelon.toktales.core.render.order">IRenderOrder</a>&nbsp;renderOrder,
                                           <a href="../../../../../../com/tokelon/toktales/core/engine/IEngineContext.html" title="interface in com.tokelon.toktales.core.engine">IEngineContext</a>&nbsp;engineContext,
                                           <a href="../../../../../../com/tokelon/toktales/core/game/state/IGameStateInput.html" title="interface in com.tokelon.toktales.core.game.state">IGameStateInput</a>&nbsp;gamestateInput,
                                           <a href="../../../../../../com/tokelon/toktales/core/game/state/scene/IGameSceneControl.IGameSceneControlFactory.html" title="interface in com.tokelon.toktales.core.game.state.scene">IGameSceneControl.IGameSceneControlFactory</a>&nbsp;gamesceneControlFactory,
@@ -881,10 +873,10 @@ protected&nbsp;void&nbsp;injectDependencies(<a href="../../../../../../com/tokel
 <li class="blockList">
 <h4>afterDependencyInjection</h4>
 <pre>protected&nbsp;void&nbsp;afterDependencyInjection()</pre>
-<div class="block">Called after dependencies have been injected, during <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.render.order.IRenderOrder-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-"><code>injectDependencies(com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory, com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory, com.tokelon.toktales.core.render.order.IRenderOrder, com.tokelon.toktales.core.engine.IEngineContext, com.tokelon.toktales.core.game.state.IGameStateInput, com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory, com.tokelon.toktales.core.game.state.render.IGameStateRenderer, com.tokelon.toktales.core.game.state.IGameStateInputHandler, com.tokelon.toktales.core.game.state.IControlScheme, com.tokelon.toktales.core.game.state.IControlHandler)</code></a>.</div>
+<div class="block">Called after dependencies have been injected, during <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-"><code>injectDependencies(com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory, com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory, com.tokelon.toktales.core.engine.IEngineContext, com.tokelon.toktales.core.game.state.IGameStateInput, com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory, com.tokelon.toktales.core.game.state.render.IGameStateRenderer, com.tokelon.toktales.core.game.state.IGameStateInputHandler, com.tokelon.toktales.core.game.state.IControlScheme, com.tokelon.toktales.core.game.state.IControlHandler)</code></a>.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.render.order.IRenderOrder-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-"><code>injectDependencies(com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory, com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory, com.tokelon.toktales.core.render.order.IRenderOrder, com.tokelon.toktales.core.engine.IEngineContext, com.tokelon.toktales.core.game.state.IGameStateInput, com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory, com.tokelon.toktales.core.game.state.render.IGameStateRenderer, com.tokelon.toktales.core.game.state.IGameStateInputHandler, com.tokelon.toktales.core.game.state.IControlScheme, com.tokelon.toktales.core.game.state.IControlHandler)</code></a></dd>
+<dd><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-"><code>injectDependencies(com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory, com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory, com.tokelon.toktales.core.engine.IEngineContext, com.tokelon.toktales.core.game.state.IGameStateInput, com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory, com.tokelon.toktales.core.game.state.render.IGameStateRenderer, com.tokelon.toktales.core.game.state.IGameStateInputHandler, com.tokelon.toktales.core.game.state.IControlScheme, com.tokelon.toktales.core.game.state.IControlHandler)</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -902,7 +894,7 @@ protected&nbsp;void&nbsp;injectDependencies(<a href="../../../../../../com/tokel
  <p>
  Overriding this method is usually not necessary, however if you do you must call super().
  <p>
- This method will be called during <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.render.order.IRenderOrder-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-"><code>injectDependencies(com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory, com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory, com.tokelon.toktales.core.render.order.IRenderOrder, com.tokelon.toktales.core.engine.IEngineContext, com.tokelon.toktales.core.game.state.IGameStateInput, com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory, com.tokelon.toktales.core.game.state.render.IGameStateRenderer, com.tokelon.toktales.core.game.state.IGameStateInputHandler, com.tokelon.toktales.core.game.state.IControlScheme, com.tokelon.toktales.core.game.state.IControlHandler)</code></a>, after <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#afterDependencyInjection--"><code>afterDependencyInjection()</code></a>.</div>
+ This method will be called during <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-"><code>injectDependencies(com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory, com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory, com.tokelon.toktales.core.engine.IEngineContext, com.tokelon.toktales.core.game.state.IGameStateInput, com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory, com.tokelon.toktales.core.game.state.render.IGameStateRenderer, com.tokelon.toktales.core.game.state.IGameStateInputHandler, com.tokelon.toktales.core.game.state.IControlScheme, com.tokelon.toktales.core.game.state.IControlHandler)</code></a>, after <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#afterDependencyInjection--"><code>afterDependencyInjection()</code></a>.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
 <dd><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#afterInitBaseDependencies--"><code>afterInitBaseDependencies()</code></a></dd>
@@ -939,7 +931,7 @@ protected&nbsp;void&nbsp;injectDependencies(<a href="../../../../../../com/tokel
  If any state objects have been set before this call (ex. in the constructor),
  those will be passed here as parameters.
  <p>
- This method will be called during <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.render.order.IRenderOrder-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-"><code>injectDependencies(com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory, com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory, com.tokelon.toktales.core.render.order.IRenderOrder, com.tokelon.toktales.core.engine.IEngineContext, com.tokelon.toktales.core.game.state.IGameStateInput, com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory, com.tokelon.toktales.core.game.state.render.IGameStateRenderer, com.tokelon.toktales.core.game.state.IGameStateInputHandler, com.tokelon.toktales.core.game.state.IControlScheme, com.tokelon.toktales.core.game.state.IControlHandler)</code></a>, after <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#initBaseDependencies-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-javax.inject.Provider-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IModifiableGameSceneControl-"><code>initBaseDependencies(com.tokelon.toktales.core.engine.IEngineContext, com.tokelon.toktales.core.game.state.IGameStateInput, javax.inject.Provider&lt;? extends T&gt;, com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IModifiableGameSceneControl&lt;T&gt;)</code></a> and <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#afterInitBaseDependencies--"><code>afterInitBaseDependencies()</code></a>,
+ This method will be called during <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-"><code>injectDependencies(com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory, com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory, com.tokelon.toktales.core.engine.IEngineContext, com.tokelon.toktales.core.game.state.IGameStateInput, com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory, com.tokelon.toktales.core.game.state.render.IGameStateRenderer, com.tokelon.toktales.core.game.state.IGameStateInputHandler, com.tokelon.toktales.core.game.state.IControlScheme, com.tokelon.toktales.core.game.state.IControlHandler)</code></a>, after <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#initBaseDependencies-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-javax.inject.Provider-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IModifiableGameSceneControl-"><code>initBaseDependencies(com.tokelon.toktales.core.engine.IEngineContext, com.tokelon.toktales.core.game.state.IGameStateInput, javax.inject.Provider&lt;? extends T&gt;, com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IModifiableGameSceneControl&lt;T&gt;)</code></a> and <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#afterInitBaseDependencies--"><code>afterInitBaseDependencies()</code></a>,
  so the context and any other injected objects will have their injected values.</div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
@@ -972,13 +964,13 @@ protected&nbsp;void&nbsp;injectDependencies(<a href="../../../../../../com/tokel
 <li class="blockList">
 <h4>afterInjectDependencies</h4>
 <pre>protected&nbsp;void&nbsp;afterInjectDependencies()</pre>
-<div class="block">Called after <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.render.order.IRenderOrder-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-"><code>injectDependencies(com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory, com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory, com.tokelon.toktales.core.render.order.IRenderOrder, com.tokelon.toktales.core.engine.IEngineContext, com.tokelon.toktales.core.game.state.IGameStateInput, com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory, com.tokelon.toktales.core.game.state.render.IGameStateRenderer, com.tokelon.toktales.core.game.state.IGameStateInputHandler, com.tokelon.toktales.core.game.state.IControlScheme, com.tokelon.toktales.core.game.state.IControlHandler)</code></a> has run (at the end of it).
+<div class="block">Called after <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-"><code>injectDependencies(com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory, com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory, com.tokelon.toktales.core.engine.IEngineContext, com.tokelon.toktales.core.game.state.IGameStateInput, com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory, com.tokelon.toktales.core.game.state.render.IGameStateRenderer, com.tokelon.toktales.core.game.state.IGameStateInputHandler, com.tokelon.toktales.core.game.state.IControlScheme, com.tokelon.toktales.core.game.state.IControlHandler)</code></a> has run (at the end of it).
  
  The default implementation for this will:<br>
  - Setup the initial game scene using <a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#atSetupInitialGamescene--"><code>atSetupInitialGamescene()</code></a>.<br></div>
 <dl>
 <dt><span class="seeLabel">See Also:</span></dt>
-<dd><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.render.order.IRenderOrder-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-"><code>injectDependencies(com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory, com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory, com.tokelon.toktales.core.render.order.IRenderOrder, com.tokelon.toktales.core.engine.IEngineContext, com.tokelon.toktales.core.game.state.IGameStateInput, com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory, com.tokelon.toktales.core.game.state.render.IGameStateRenderer, com.tokelon.toktales.core.game.state.IGameStateInputHandler, com.tokelon.toktales.core.game.state.IControlScheme, com.tokelon.toktales.core.game.state.IControlHandler)</code></a></dd>
+<dd><a href="../../../../../../com/tokelon/toktales/core/game/state/BaseGamestate.html#injectDependencies-com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory-com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory-com.tokelon.toktales.core.engine.IEngineContext-com.tokelon.toktales.core.game.state.IGameStateInput-com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory-com.tokelon.toktales.core.game.state.render.IGameStateRenderer-com.tokelon.toktales.core.game.state.IGameStateInputHandler-com.tokelon.toktales.core.game.state.IControlScheme-com.tokelon.toktales.core.game.state.IControlHandler-"><code>injectDependencies(com.tokelon.toktales.tools.core.inject.parameter.IParameterInjector.IParameterInjectorFactory, com.tokelon.toktales.core.game.state.integration.IGameStateIntegrator.IGameStateIntegratorFactory, com.tokelon.toktales.core.engine.IEngineContext, com.tokelon.toktales.core.game.state.IGameStateInput, com.tokelon.toktales.core.game.state.scene.IGameSceneControl.IGameSceneControlFactory, com.tokelon.toktales.core.game.state.render.IGameStateRenderer, com.tokelon.toktales.core.game.state.IGameStateInputHandler, com.tokelon.toktales.core.game.state.IControlScheme, com.tokelon.toktales.core.game.state.IControlHandler)</code></a></dd>
 </dl>
 </li>
 </ul>
@@ -1391,23 +1383,6 @@ protected&nbsp;void&nbsp;injectDependencies(<a href="../../../../../../com/tokel
 <dd><code><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#getGame--">getGame</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html" title="interface in com.tokelon.toktales.core.game.state">IGameState</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The context game.</dd>
-</dl>
-</li>
-</ul>
-<a name="getRenderOrder--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getRenderOrder</h4>
-<pre>public&nbsp;<a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderOrder.html" title="interface in com.tokelon.toktales.core.render.order">IRenderOrder</a>&nbsp;getRenderOrder()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#getRenderOrder--">IGameState</a></code></span></div>
-<div class="block">Returns the render order for this state.</div>
-<dl>
-<dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#getRenderOrder--">getRenderOrder</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html" title="interface in com.tokelon.toktales.core.game.state">IGameState</a></code></dd>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>A render order.</dd>
 </dl>
 </li>
 </ul>

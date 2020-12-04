@@ -47,7 +47,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li>Prev&nbsp;Class</li>
 <li><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderLayerStack.IStackNavigator.html" title="interface in com.tokelon.toktales.core.render.order"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
@@ -153,19 +153,19 @@ var activeTableTab = "activeTableTab";
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderLayerStack.html#addCallbackAt-double-com.tokelon.toktales.core.render.order.IRenderCallback-">addCallbackAt</a></span>(double&nbsp;position,
-             <a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a>&nbsp;callback)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderLayerStack.html#addCallbackAt-double-com.tokelon.toktales.core.render.IRenderCall-">addCallbackAt</a></span>(double&nbsp;position,
+             <a href="../../../../../../com/tokelon/toktales/core/render/IRenderCall.html" title="interface in com.tokelon.toktales.core.render">IRenderCall</a>&nbsp;callback)</code>
 <div class="block">Adds the given position to the stack and assigns the given callback to it.</div>
 </td>
 </tr>
 <tr id="i1" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a></code></td>
+<td class="colFirst"><code><a href="../../../../../../com/tokelon/toktales/core/render/IRenderCall.html" title="interface in com.tokelon.toktales.core.render">IRenderCall</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderLayerStack.html#getCallbackAt-double-">getCallbackAt</a></span>(double&nbsp;position)</code>
 <div class="block">Beware that the given value must match exactly the position value for the callback you are trying to remove.</div>
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a>&gt;</code></td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../com/tokelon/toktales/core/render/IRenderCall.html" title="interface in com.tokelon.toktales.core.render">IRenderCall</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderLayerStack.html#getCallbacks--">getCallbacks</a></span>()</code>
 <div class="block">Note that when iterating over the returned collection you must synchronize on this object to ensure thread safety.</div>
 </td>
@@ -221,14 +221,14 @@ var activeTableTab = "activeTableTab";
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="addCallbackAt-double-com.tokelon.toktales.core.render.order.IRenderCallback-">
+<a name="addCallbackAt-double-com.tokelon.toktales.core.render.IRenderCall-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>addCallbackAt</h4>
 <pre>void&nbsp;addCallbackAt(double&nbsp;position,
-                   <a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a>&nbsp;callback)</pre>
+                   <a href="../../../../../../com/tokelon/toktales/core/render/IRenderCall.html" title="interface in com.tokelon.toktales.core.render">IRenderCall</a>&nbsp;callback)</pre>
 <div class="block">Adds the given position to the stack and assigns the given callback to it.
  <br><br>
  Any double value, positive or negative is a valid position.
@@ -262,7 +262,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>getCallbackAt</h4>
-<pre><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a>&nbsp;getCallbackAt(double&nbsp;position)</pre>
+<pre><a href="../../../../../../com/tokelon/toktales/core/render/IRenderCall.html" title="interface in com.tokelon.toktales.core.render">IRenderCall</a>&nbsp;getCallbackAt(double&nbsp;position)</pre>
 <div class="block">Beware that the given value must match exactly the position value for the callback you are trying to remove.</div>
 <dl>
 <dt><span class="paramLabel">Parameters:</span></dt>
@@ -278,7 +278,7 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <h4>getCallbacks</h4>
-<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a>&gt;&nbsp;getCallbacks()</pre>
+<pre><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../com/tokelon/toktales/core/render/IRenderCall.html" title="interface in com.tokelon.toktales.core.render">IRenderCall</a>&gt;&nbsp;getCallbacks()</pre>
 <div class="block">Note that when iterating over the returned collection you must synchronize on this object to ensure thread safety.</div>
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
@@ -409,7 +409,7 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li>Prev&nbsp;Class</li>
 <li><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderLayerStack.IStackNavigator.html" title="interface in com.tokelon.toktales.core.render.order"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">

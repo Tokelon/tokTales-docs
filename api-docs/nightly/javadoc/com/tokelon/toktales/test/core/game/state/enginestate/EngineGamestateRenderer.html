@@ -112,7 +112,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a>, <a href="../../../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a>, <a href="../../../../../../../../com/tokelon/toktales/core/screen/surface/ISurfaceManager.ISurfaceCallback.html" title="interface in com.tokelon.toktales.core.screen.surface">ISurfaceManager.ISurfaceCallback</a>, <a href="../../../../../../../../com/tokelon/toktales/test/core/game/state/enginestate/IEngineGamestateRenderer.html" title="interface in com.tokelon.toktales.test.core.game.state.enginestate">IEngineGamestateRenderer</a></dd>
+<dd><a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a>, <a href="../../../../../../../../com/tokelon/toktales/core/screen/surface/ISurfaceManager.ISurfaceCallback.html" title="interface in com.tokelon.toktales.core.screen.surface">ISurfaceManager.ISurfaceCallback</a>, <a href="../../../../../../../../com/tokelon/toktales/test/core/game/state/enginestate/IEngineGamestateRenderer.html" title="interface in com.tokelon.toktales.test.core.game.state.enginestate">IEngineGamestateRenderer</a></dd>
 </dl>
 <hr>
 <br>
@@ -188,9 +188,8 @@ implements <a href="../../../../../../../../com/tokelon/toktales/test/core/game/
 </tr>
 <tr id="i4" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../../com/tokelon/toktales/test/core/game/state/enginestate/EngineGamestateRenderer.html#renderCall-java.lang.String-double-">renderCall</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;layerName,
-          double&nbsp;stackPosition)</code>
-<div class="block">Calls this with the parameters given from the current context.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../../com/tokelon/toktales/test/core/game/state/enginestate/EngineGamestateRenderer.html#renderState--">renderState</a></span>()</code>
+<div class="block">Renders the state this renderer is assigned to.</div>
 </td>
 </tr>
 </table>
@@ -199,7 +198,7 @@ implements <a href="../../../../../../../../com/tokelon/toktales/test/core/game/
 <!--   -->
 </a>
 <h3>Methods inherited from class&nbsp;com.tokelon.toktales.core.game.state.render.<a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html" title="class in com.tokelon.toktales.core.game.state.render">AbstractGameStateRenderer</a></h3>
-<code><a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#addManagedRenderer-java.lang.String-com.tokelon.toktales.core.render.renderer.IRenderer-">addManagedRenderer</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getContextViewport--">getContextViewport</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getCurrentCamera--">getCurrentCamera</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getManagedRenderer-java.lang.String-">getManagedRenderer</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getProjectionMatrix--">getProjectionMatrix</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getSurface--">getSurface</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getTextureCoordinator--">getTextureCoordinator</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getViewTransformer--">getViewTransformer</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#hasManagedRenderer-java.lang.String-">hasManagedRenderer</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#hasSurface--">hasSurface</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#hasView--">hasView</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#removeManagedRenderer-java.lang.String-">removeManagedRenderer</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#surfaceChanged-com.tokelon.toktales.core.screen.surface.ISurface-">surfaceChanged</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#surfaceCreated-com.tokelon.toktales.core.screen.surface.ISurface-">surfaceCreated</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#surfaceDestroyed-com.tokelon.toktales.core.screen.surface.ISurface-">surfaceDestroyed</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#updateCamera-com.tokelon.toktales.core.game.model.ICamera-">updateCamera</a></code></li>
+<code><a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getContextManager--">getContextManager</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getContextViewport--">getContextViewport</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getCurrentCamera--">getCurrentCamera</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getProjectionMatrix--">getProjectionMatrix</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getRenderCall-java.lang.String-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">getRenderCall</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getRenderOrder--">getRenderOrder</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getSurface--">getSurface</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getSurfaceCallback--">getSurfaceCallback</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getTextureCoordinator--">getTextureCoordinator</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#getViewTransformer--">getViewTransformer</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#hasSurface--">hasSurface</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#surfaceChanged-com.tokelon.toktales.core.screen.surface.ISurface-">surfaceChanged</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#surfaceCreated-com.tokelon.toktales.core.screen.surface.ISurface-">surfaceCreated</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#surfaceDestroyed-com.tokelon.toktales.core.screen.surface.ISurface-">surfaceDestroyed</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#updateCamera-com.tokelon.toktales.core.game.model.ICamera-">updateCamera</a></code></li>
 </ul>
 <ul class="blockList">
 <li class="blockList"><a name="methods.inherited.from.class.java.lang.Object">
@@ -213,21 +212,7 @@ implements <a href="../../../../../../../../com/tokelon/toktales/test/core/game/
 <!--   -->
 </a>
 <h3>Methods inherited from interface&nbsp;com.tokelon.toktales.core.game.state.render.<a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></h3>
-<code><a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#addManagedRenderer-java.lang.String-com.tokelon.toktales.core.render.renderer.IRenderer-">addManagedRenderer</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getCurrentCamera--">getCurrentCamera</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getManagedRenderer-java.lang.String-">getManagedRenderer</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getSurface--">getSurface</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getTextureCoordinator--">getTextureCoordinator</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getViewTransformer--">getViewTransformer</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#hasManagedRenderer-java.lang.String-">hasManagedRenderer</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#hasSurface--">hasSurface</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#removeManagedRenderer-java.lang.String-">removeManagedRenderer</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#updateCamera-com.tokelon.toktales.core.game.model.ICamera-">updateCamera</a></code></li>
-</ul>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.com.tokelon.toktales.core.screen.surface.ISurfaceManager.ISurfaceCallback">
-<!--   -->
-</a>
-<h3>Methods inherited from interface&nbsp;com.tokelon.toktales.core.screen.surface.<a href="../../../../../../../../com/tokelon/toktales/core/screen/surface/ISurfaceManager.ISurfaceCallback.html" title="interface in com.tokelon.toktales.core.screen.surface">ISurfaceManager.ISurfaceCallback</a></h3>
-<code><a href="../../../../../../../../com/tokelon/toktales/core/screen/surface/ISurfaceManager.ISurfaceCallback.html#surfaceChanged-com.tokelon.toktales.core.screen.surface.ISurface-">surfaceChanged</a>, <a href="../../../../../../../../com/tokelon/toktales/core/screen/surface/ISurfaceManager.ISurfaceCallback.html#surfaceCreated-com.tokelon.toktales.core.screen.surface.ISurface-">surfaceCreated</a>, <a href="../../../../../../../../com/tokelon/toktales/core/screen/surface/ISurfaceManager.ISurfaceCallback.html#surfaceDestroyed-com.tokelon.toktales.core.screen.surface.ISurface-">surfaceDestroyed</a></code></li>
-</ul>
-<ul class="blockList">
-<li class="blockList"><a name="methods.inherited.from.class.com.tokelon.toktales.core.render.order.IRenderCallback">
-<!--   -->
-</a>
-<h3>Methods inherited from interface&nbsp;com.tokelon.toktales.core.render.order.<a href="../../../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a></h3>
-<code><a href="../../../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html#getDescription--">getDescription</a></code></li>
+<code><a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getContextManager--">getContextManager</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getCurrentCamera--">getCurrentCamera</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getRenderCall-java.lang.String-com.tokelon.toktales.tools.core.objects.options.INamedOptions-">getRenderCall</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getRenderOrder--">getRenderOrder</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getSurface--">getSurface</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getSurfaceCallback--">getSurfaceCallback</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getTextureCoordinator--">getTextureCoordinator</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#getViewTransformer--">getViewTransformer</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#hasSurface--">hasSurface</a>, <a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#updateCamera-com.tokelon.toktales.core.game.model.ICamera-">updateCamera</a></code></li>
 </ul>
 </li>
 </ul>
@@ -271,22 +256,20 @@ public&nbsp;EngineGamestateRenderer(<a href="../../../../../../../../com/tokelon
 <pre>public&nbsp;<a href="../../../../../../../../com/tokelon/toktales/test/core/game/state/enginestate/IEngineGamestate.html" title="interface in com.tokelon.toktales.test.core.game.state.enginestate">IEngineGamestate</a>&nbsp;getGamestate()</pre>
 </li>
 </ul>
-<a name="renderCall-java.lang.String-double-">
+<a name="renderState--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>renderCall</h4>
-<pre>public&nbsp;void&nbsp;renderCall(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;layerName,
-                       double&nbsp;stackPosition)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html#renderCall-java.lang.String-double-">IRenderCallback</a></code></span></div>
-<div class="block">Calls this with the parameters given from the current context.</div>
+<h4>renderState</h4>
+<pre>public&nbsp;void&nbsp;renderState()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#renderState--">IGameStateRenderer</a></code></span></div>
+<div class="block">Renders the state this renderer is assigned to.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html#renderCall-java.lang.String-double-">renderCall</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a></code></dd>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>layerName</code> - The layer name of the calling context.</dd>
-<dd><code>stackPosition</code> - the stack position of the calling context.</dd>
+<dd><code><a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html#renderState--">renderState</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></code></dd>
+<dt><span class="overrideSpecifyLabel">Overrides:</span></dt>
+<dd><code><a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html#renderState--">renderState</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../../../../com/tokelon/toktales/core/game/state/render/AbstractGameStateRenderer.html" title="class in com.tokelon.toktales.core.game.state.render">AbstractGameStateRenderer</a></code></dd>
 </dl>
 </li>
 </ul>

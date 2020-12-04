@@ -107,7 +107,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a></dd>
+<dd><a href="../../../../../../com/tokelon/toktales/core/render/IRenderContext.html" title="interface in com.tokelon.toktales.core.render">IRenderContext</a>, <a href="../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a></dd>
 </dl>
 <dl>
 <dt>Direct Known Subclasses:</dt>
@@ -277,13 +277,13 @@ implements <a href="../../../../../../com/tokelon/toktales/core/render/renderer/
 <li class="blockList">
 <h4>contextCreated</h4>
 <pre>public&nbsp;void&nbsp;contextCreated()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html#contextCreated--">IRenderer</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/render/IRenderContext.html#contextCreated--">IRenderContext</a></code></span></div>
 <div class="block">Called when the render context has been created.
  <p>
  Low level dependencies should be initialized here.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html#contextCreated--">contextCreated</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a></code></dd>
+<dd><code><a href="../../../../../../com/tokelon/toktales/core/render/IRenderContext.html#contextCreated--">contextCreated</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/render/IRenderContext.html" title="interface in com.tokelon.toktales.core.render">IRenderContext</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -295,13 +295,13 @@ implements <a href="../../../../../../com/tokelon/toktales/core/render/renderer/
 <h4>contextChanged</h4>
 <pre>public&nbsp;void&nbsp;contextChanged(<a href="../../../../../../com/tokelon/toktales/core/screen/view/IViewTransformer.html" title="interface in com.tokelon.toktales.core.screen.view">IViewTransformer</a>&nbsp;viewTransformer,
                            org.joml.Matrix4f&nbsp;projectionMatrix)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html#contextChanged-com.tokelon.toktales.core.screen.view.IViewTransformer-org.joml.Matrix4f-">IRenderer</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/render/IRenderContext.html#contextChanged-com.tokelon.toktales.core.screen.view.IViewTransformer-org.joml.Matrix4f-">IRenderContext</a></code></span></div>
 <div class="block">Called when the render context has been changed.
  <p>
  THe given view properties can be used for rendering later.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html#contextChanged-com.tokelon.toktales.core.screen.view.IViewTransformer-org.joml.Matrix4f-">contextChanged</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a></code></dd>
+<dd><code><a href="../../../../../../com/tokelon/toktales/core/render/IRenderContext.html#contextChanged-com.tokelon.toktales.core.screen.view.IViewTransformer-org.joml.Matrix4f-">contextChanged</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/render/IRenderContext.html" title="interface in com.tokelon.toktales.core.render">IRenderContext</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>viewTransformer</code> - The view transformer used for rendering.</dd>
 <dd><code>projectionMatrix</code> - The projection matrix used for rendering.</dd>
@@ -315,13 +315,13 @@ implements <a href="../../../../../../com/tokelon/toktales/core/render/renderer/
 <li class="blockList">
 <h4>contextDestroyed</h4>
 <pre>public&nbsp;void&nbsp;contextDestroyed()</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html#contextDestroyed--">IRenderer</a></code></span></div>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/render/IRenderContext.html#contextDestroyed--">IRenderContext</a></code></span></div>
 <div class="block">Called when the render context has been destroyed.
  <p>
  Low level dependencies should be disposed here.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html#contextDestroyed--">contextDestroyed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IRenderer</a></code></dd>
+<dd><code><a href="../../../../../../com/tokelon/toktales/core/render/IRenderContext.html#contextDestroyed--">contextDestroyed</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/render/IRenderContext.html" title="interface in com.tokelon.toktales.core.render">IRenderContext</a></code></dd>
 </dl>
 </li>
 </ul>

@@ -166,8 +166,8 @@ implements <a href="../../../../../../com/tokelon/toktales/core/render/order/IRe
 </tr>
 <tr id="i0" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/render/order/RenderLayerStack.html#addCallbackAt-double-com.tokelon.toktales.core.render.order.IRenderCallback-">addCallbackAt</a></span>(double&nbsp;position,
-             <a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a>&nbsp;callback)</code>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/render/order/RenderLayerStack.html#addCallbackAt-double-com.tokelon.toktales.core.render.IRenderCall-">addCallbackAt</a></span>(double&nbsp;position,
+             <a href="../../../../../../com/tokelon/toktales/core/render/IRenderCall.html" title="interface in com.tokelon.toktales.core.render">IRenderCall</a>&nbsp;callback)</code>
 <div class="block">Adds the given position to the stack and assigns the given callback to it.</div>
 </td>
 </tr>
@@ -178,13 +178,13 @@ implements <a href="../../../../../../com/tokelon/toktales/core/render/order/IRe
 </td>
 </tr>
 <tr id="i2" class="altColor">
-<td class="colFirst"><code><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a></code></td>
+<td class="colFirst"><code><a href="../../../../../../com/tokelon/toktales/core/render/IRenderCall.html" title="interface in com.tokelon.toktales.core.render">IRenderCall</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/render/order/RenderLayerStack.html#getCallbackAt-double-">getCallbackAt</a></span>(double&nbsp;position)</code>
 <div class="block">Beware that the given value must match exactly the position value for the callback you are trying to remove.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
-<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a>&gt;</code></td>
+<td class="colFirst"><code><a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../com/tokelon/toktales/core/render/IRenderCall.html" title="interface in com.tokelon.toktales.core.render">IRenderCall</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/render/order/RenderLayerStack.html#getCallbacks--">getCallbacks</a></span>()</code>
 <div class="block">Note that when iterating over the returned collection you must synchronize on this object to ensure thread safety.</div>
 </td>
@@ -264,22 +264,22 @@ implements <a href="../../../../../../com/tokelon/toktales/core/render/order/IRe
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="addCallbackAt-double-com.tokelon.toktales.core.render.order.IRenderCallback-">
+<a name="addCallbackAt-double-com.tokelon.toktales.core.render.IRenderCall-">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
 <h4>addCallbackAt</h4>
 <pre>public&nbsp;void&nbsp;addCallbackAt(double&nbsp;position,
-                          <a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a>&nbsp;callback)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderLayerStack.html#addCallbackAt-double-com.tokelon.toktales.core.render.order.IRenderCallback-">IRenderLayerStack</a></code></span></div>
+                          <a href="../../../../../../com/tokelon/toktales/core/render/IRenderCall.html" title="interface in com.tokelon.toktales.core.render">IRenderCall</a>&nbsp;callback)</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderLayerStack.html#addCallbackAt-double-com.tokelon.toktales.core.render.IRenderCall-">IRenderLayerStack</a></code></span></div>
 <div class="block">Adds the given position to the stack and assigns the given callback to it.
  <br><br>
  Any double value, positive or negative is a valid position.
  Unless you are positioning in between calls it is recommended to use integer values.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderLayerStack.html#addCallbackAt-double-com.tokelon.toktales.core.render.order.IRenderCallback-">addCallbackAt</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderLayerStack.html" title="interface in com.tokelon.toktales.core.render.order">IRenderLayerStack</a></code></dd>
+<dd><code><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderLayerStack.html#addCallbackAt-double-com.tokelon.toktales.core.render.IRenderCall-">addCallbackAt</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderLayerStack.html" title="interface in com.tokelon.toktales.core.render.order">IRenderLayerStack</a></code></dd>
 <dt><span class="paramLabel">Parameters:</span></dt>
 <dd><code>position</code> - The position at which the callback should be placed at.</dd>
 <dd><code>callback</code> - The callback.</dd>
@@ -309,7 +309,7 @@ implements <a href="../../../../../../com/tokelon/toktales/core/render/order/IRe
 <ul class="blockList">
 <li class="blockList">
 <h4>getCallbackAt</h4>
-<pre>public&nbsp;<a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a>&nbsp;getCallbackAt(double&nbsp;position)</pre>
+<pre>public&nbsp;<a href="../../../../../../com/tokelon/toktales/core/render/IRenderCall.html" title="interface in com.tokelon.toktales.core.render">IRenderCall</a>&nbsp;getCallbackAt(double&nbsp;position)</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderLayerStack.html#getCallbackAt-double-">IRenderLayerStack</a></code></span></div>
 <div class="block">Beware that the given value must match exactly the position value for the callback you are trying to remove.</div>
 <dl>
@@ -326,7 +326,7 @@ implements <a href="../../../../../../com/tokelon/toktales/core/render/order/IRe
 <ul class="blockList">
 <li class="blockList">
 <h4>getCallbacks</h4>
-<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a>&gt;&nbsp;getCallbacks()</pre>
+<pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/util/Collection.html?is-external=true" title="class or interface in java.util">Collection</a>&lt;<a href="../../../../../../com/tokelon/toktales/core/render/IRenderCall.html" title="interface in com.tokelon.toktales.core.render">IRenderCall</a>&gt;&nbsp;getCallbacks()</pre>
 <div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderLayerStack.html#getCallbacks--">IRenderLayerStack</a></code></span></div>
 <div class="block">Note that when iterating over the returned collection you must synchronize on this object to ensure thread safety.</div>
 <dl>

@@ -107,7 +107,7 @@ var activeTableTab = "activeTableTab";
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a></dd>
+<dd><a href="../../../../../../../../com/tokelon/toktales/core/render/IRenderCall.html" title="interface in com.tokelon.toktales.core.render">IRenderCall</a></dd>
 </dl>
 <dl>
 <dt>Enclosing class:</dt>
@@ -117,7 +117,7 @@ var activeTableTab = "activeTableTab";
 <br>
 <pre>protected static class <span class="typeNameLabel">DialogBaseLocalMapGamescene.DialogRenderCallback</span>
 extends <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">Object</a>
-implements <a href="../../../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a></pre>
+implements <a href="../../../../../../../../com/tokelon/toktales/core/render/IRenderCall.html" title="interface in com.tokelon.toktales.core.render">IRenderCall</a></pre>
 </li>
 </ul>
 </div>
@@ -164,9 +164,8 @@ implements <a href="../../../../../../../../com/tokelon/toktales/core/render/ord
 </tr>
 <tr id="i2" class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../../com/tokelon/toktales/extensions/core/game/state/localmap/DialogBaseLocalMapGamescene.DialogRenderCallback.html#renderCall-java.lang.String-double-">renderCall</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;layerName,
-          double&nbsp;stackPosition)</code>
-<div class="block">Calls this with the parameters given from the current context.</div>
+<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../../../com/tokelon/toktales/extensions/core/game/state/localmap/DialogBaseLocalMapGamescene.DialogRenderCallback.html#render--">render</a></span>()</code>
+<div class="block">Renders this call's content.</div>
 </td>
 </tr>
 <tr id="i3" class="rowColor">
@@ -231,22 +230,18 @@ implements <a href="../../../../../../../../com/tokelon/toktales/core/render/ord
 <pre>public&nbsp;void&nbsp;unregister()</pre>
 </li>
 </ul>
-<a name="renderCall-java.lang.String-double-">
+<a name="render--">
 <!--   -->
 </a>
 <ul class="blockList">
 <li class="blockList">
-<h4>renderCall</h4>
-<pre>public&nbsp;void&nbsp;renderCall(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;layerName,
-                       double&nbsp;stackPosition)</pre>
-<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html#renderCall-java.lang.String-double-">IRenderCallback</a></code></span></div>
-<div class="block">Calls this with the parameters given from the current context.</div>
+<h4>render</h4>
+<pre>public&nbsp;void&nbsp;render()</pre>
+<div class="block"><span class="descfrmTypeLabel">Description copied from interface:&nbsp;<code><a href="../../../../../../../../com/tokelon/toktales/core/render/IRenderCall.html#render--">IRenderCall</a></code></span></div>
+<div class="block">Renders this call's content.</div>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html#renderCall-java.lang.String-double-">renderCall</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a></code></dd>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>layerName</code> - The layer name of the calling context.</dd>
-<dd><code>stackPosition</code> - the stack position of the calling context.</dd>
+<dd><code><a href="../../../../../../../../com/tokelon/toktales/core/render/IRenderCall.html#render--">render</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../../com/tokelon/toktales/core/render/IRenderCall.html" title="interface in com.tokelon.toktales.core.render">IRenderCall</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -259,9 +254,9 @@ implements <a href="../../../../../../../../com/tokelon/toktales/core/render/ord
 <pre>public&nbsp;<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getDescription()</pre>
 <dl>
 <dt><span class="overrideSpecifyLabel">Specified by:</span></dt>
-<dd><code><a href="../../../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html#getDescription--">getDescription</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../../com/tokelon/toktales/core/render/order/IRenderCallback.html" title="interface in com.tokelon.toktales.core.render.order">IRenderCallback</a></code></dd>
+<dd><code><a href="../../../../../../../../com/tokelon/toktales/core/render/IRenderCall.html#getDescription--">getDescription</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../../../../com/tokelon/toktales/core/render/IRenderCall.html" title="interface in com.tokelon.toktales.core.render">IRenderCall</a></code></dd>
 <dt><span class="returnLabel">Returns:</span></dt>
-<dd>A brief description or name for this callback.</dd>
+<dd>A brief description or name for this call.</dd>
 </dl>
 </li>
 </ul>

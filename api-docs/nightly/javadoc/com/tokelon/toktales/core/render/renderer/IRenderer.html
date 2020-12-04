@@ -17,12 +17,6 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6};
-var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
-var altColor = "altColor";
-var rowColor = "rowColor";
-var tableTab = "tableTab";
-var activeTableTab = "activeTableTab";
 </script>
 <noscript>
 <div>JavaScript is disabled on your browser.</div>
@@ -47,8 +41,8 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../com/tokelon/toktales/core/render/renderer/ImageRenderer.html" title="class in com.tokelon.toktales.core.render.renderer"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../../com/tokelon/toktales/core/render/renderer/IMultiRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../../com/tokelon/toktales/core/render/renderer/IShapeRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?com/tokelon/toktales/core/render/renderer/IRenderer.html" target="_top">Frames</a></li>
@@ -75,13 +69,13 @@ var activeTableTab = "activeTableTab";
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li><a href="#method.summary">Method</a></li>
+<li>Method</li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li><a href="#method.detail">Method</a></li>
+<li>Method</li>
 </ul>
 </div>
 <a name="skip.navbar.top">
@@ -98,8 +92,12 @@ var activeTableTab = "activeTableTab";
 <ul class="blockList">
 <li class="blockList">
 <dl>
+<dt>All Superinterfaces:</dt>
+<dd><a href="../../../../../../com/tokelon/toktales/core/render/IRenderContext.html" title="interface in com.tokelon.toktales.core.render">IRenderContext</a></dd>
+</dl>
+<dl>
 <dt>All Known Subinterfaces:</dt>
-<dd><a href="../../../../../../com/tokelon/toktales/core/render/renderer/ICharRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">ICharRenderer</a>, <a href="../../../../../../com/tokelon/toktales/core/render/renderer/IChunkRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IChunkRenderer</a>, <a href="../../../../../../com/tokelon/toktales/extensions/core/game/renderer/IConsoleOverlayRenderer.html" title="interface in com.tokelon.toktales.extensions.core.game.renderer">IConsoleOverlayRenderer</a>, <a href="../../../../../../com/tokelon/toktales/extensions/core/game/renderer/IDebugRenderer.html" title="interface in com.tokelon.toktales.extensions.core.game.renderer">IDebugRenderer</a>, <a href="../../../../../../com/tokelon/toktales/extensions/core/game/renderer/IDialogRenderer.html" title="interface in com.tokelon.toktales.extensions.core.game.renderer">IDialogRenderer</a>, <a href="../../../../../../com/tokelon/toktales/extensions/core/game/renderer/IEntityRenderer.html" title="interface in com.tokelon.toktales.extensions.core.game.renderer">IEntityRenderer</a>, <a href="../../../../../../com/tokelon/toktales/core/render/renderer/IImageRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IImageRenderer</a>, <a href="../../../../../../com/tokelon/toktales/extensions/core/game/renderer/IMapRenderer.html" title="interface in com.tokelon.toktales.extensions.core.game.renderer">IMapRenderer</a>, <a href="../../../../../../com/tokelon/toktales/extensions/core/game/renderer/IObjectRenderer.html" title="interface in com.tokelon.toktales.extensions.core.game.renderer">IObjectRenderer</a>, <a href="../../../../../../com/tokelon/toktales/extensions/core/game/renderer/IPlayerRenderer.html" title="interface in com.tokelon.toktales.extensions.core.game.renderer">IPlayerRenderer</a>, <a href="../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">ISegmentRenderer</a>, <a href="../../../../../../com/tokelon/toktales/core/render/renderer/IShapeRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IShapeRenderer</a>, <a href="../../../../../../com/tokelon/toktales/extensions/core/render/ITextRenderer.html" title="interface in com.tokelon.toktales.extensions.core.render">ITextRenderer</a></dd>
+<dd><a href="../../../../../../com/tokelon/toktales/core/render/renderer/IBatchRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IBatchRenderer</a>, <a href="../../../../../../com/tokelon/toktales/core/render/renderer/ICharRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">ICharRenderer</a>, <a href="../../../../../../com/tokelon/toktales/extensions/core/game/renderer/IConsoleOverlayRenderer.html" title="interface in com.tokelon.toktales.extensions.core.game.renderer">IConsoleOverlayRenderer</a>, <a href="../../../../../../com/tokelon/toktales/extensions/core/game/renderer/IDebugRenderer.html" title="interface in com.tokelon.toktales.extensions.core.game.renderer">IDebugRenderer</a>, <a href="../../../../../../com/tokelon/toktales/extensions/core/game/renderer/IDialogRenderer.html" title="interface in com.tokelon.toktales.extensions.core.game.renderer">IDialogRenderer</a>, <a href="../../../../../../com/tokelon/toktales/extensions/core/game/renderer/IEntityRenderer.html" title="interface in com.tokelon.toktales.extensions.core.game.renderer">IEntityRenderer</a>, <a href="../../../../../../com/tokelon/toktales/core/render/renderer/IImageRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IImageRenderer</a>, <a href="../../../../../../com/tokelon/toktales/extensions/core/game/renderer/IMapRenderer.html" title="interface in com.tokelon.toktales.extensions.core.game.renderer">IMapRenderer</a>, <a href="../../../../../../com/tokelon/toktales/core/render/renderer/IMultiRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IMultiRenderer</a>, <a href="../../../../../../com/tokelon/toktales/extensions/core/game/renderer/IObjectRenderer.html" title="interface in com.tokelon.toktales.extensions.core.game.renderer">IObjectRenderer</a>, <a href="../../../../../../com/tokelon/toktales/extensions/core/game/renderer/IPlayerRenderer.html" title="interface in com.tokelon.toktales.extensions.core.game.renderer">IPlayerRenderer</a>, <a href="../../../../../../com/tokelon/toktales/core/render/renderer/IShapeRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">IShapeRenderer</a>, <a href="../../../../../../com/tokelon/toktales/core/render/renderer/ISingleRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer">ISingleRenderer</a>, <a href="../../../../../../com/tokelon/toktales/extensions/core/render/ITextRenderer.html" title="interface in com.tokelon.toktales.extensions.core.render">ITextRenderer</a></dd>
 </dl>
 <dl>
 <dt>All Known Implementing Classes:</dt>
@@ -107,7 +105,9 @@ var activeTableTab = "activeTableTab";
 </dl>
 <hr>
 <br>
-<pre>public interface <span class="typeNameLabel">IRenderer</span></pre>
+<pre>public interface <span class="typeNameLabel">IRenderer</span>
+extends <a href="../../../../../../com/tokelon/toktales/core/render/IRenderContext.html" title="interface in com.tokelon.toktales.core.render">IRenderContext</a></pre>
+<div class="block">A parent for types that render content.</div>
 </li>
 </ul>
 </div>
@@ -120,87 +120,12 @@ var activeTableTab = "activeTableTab";
 <!--   -->
 </a>
 <h3>Method Summary</h3>
-<table class="memberSummary" border="0" cellpadding="3" cellspacing="0" summary="Method Summary table, listing methods, and an explanation">
-<caption><span id="t0" class="activeTableTab"><span>All Methods</span><span class="tabEnd">&nbsp;</span></span><span id="t2" class="tableTab"><span><a href="javascript:show(2);">Instance Methods</a></span><span class="tabEnd">&nbsp;</span></span><span id="t3" class="tableTab"><span><a href="javascript:show(4);">Abstract Methods</a></span><span class="tabEnd">&nbsp;</span></span></caption>
-<tr>
-<th class="colFirst" scope="col">Modifier and Type</th>
-<th class="colLast" scope="col">Method and Description</th>
-</tr>
-<tr id="i0" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html#contextChanged-com.tokelon.toktales.core.screen.view.IViewTransformer-org.joml.Matrix4f-">contextChanged</a></span>(<a href="../../../../../../com/tokelon/toktales/core/screen/view/IViewTransformer.html" title="interface in com.tokelon.toktales.core.screen.view">IViewTransformer</a>&nbsp;viewTransformer,
-              org.joml.Matrix4f&nbsp;projectionMatrix)</code>
-<div class="block">Called when the render context has been changed.</div>
-</td>
-</tr>
-<tr id="i1" class="rowColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html#contextCreated--">contextCreated</a></span>()</code>
-<div class="block">Called when the render context has been created.</div>
-</td>
-</tr>
-<tr id="i2" class="altColor">
-<td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/render/renderer/IRenderer.html#contextDestroyed--">contextDestroyed</a></span>()</code>
-<div class="block">Called when the render context has been destroyed.</div>
-</td>
-</tr>
-</table>
-</li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="details">
 <ul class="blockList">
-<li class="blockList">
-<!-- ============ METHOD DETAIL ========== -->
-<ul class="blockList">
-<li class="blockList"><a name="method.detail">
+<li class="blockList"><a name="methods.inherited.from.class.com.tokelon.toktales.core.render.IRenderContext">
 <!--   -->
 </a>
-<h3>Method Detail</h3>
-<a name="contextCreated--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>contextCreated</h4>
-<pre>void&nbsp;contextCreated()</pre>
-<div class="block">Called when the render context has been created.
- <p>
- Low level dependencies should be initialized here.</div>
-</li>
-</ul>
-<a name="contextChanged-com.tokelon.toktales.core.screen.view.IViewTransformer-org.joml.Matrix4f-">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>contextChanged</h4>
-<pre>void&nbsp;contextChanged(<a href="../../../../../../com/tokelon/toktales/core/screen/view/IViewTransformer.html" title="interface in com.tokelon.toktales.core.screen.view">IViewTransformer</a>&nbsp;viewTransformer,
-                    org.joml.Matrix4f&nbsp;projectionMatrix)</pre>
-<div class="block">Called when the render context has been changed.
- <p>
- THe given view properties can be used for rendering later.</div>
-<dl>
-<dt><span class="paramLabel">Parameters:</span></dt>
-<dd><code>viewTransformer</code> - The view transformer used for rendering.</dd>
-<dd><code>projectionMatrix</code> - The projection matrix used for rendering.</dd>
-</dl>
-</li>
-</ul>
-<a name="contextDestroyed--">
-<!--   -->
-</a>
-<ul class="blockListLast">
-<li class="blockList">
-<h4>contextDestroyed</h4>
-<pre>void&nbsp;contextDestroyed()</pre>
-<div class="block">Called when the render context has been destroyed.
- <p>
- Low level dependencies should be disposed here.</div>
-</li>
+<h3>Methods inherited from interface&nbsp;com.tokelon.toktales.core.render.<a href="../../../../../../com/tokelon/toktales/core/render/IRenderContext.html" title="interface in com.tokelon.toktales.core.render">IRenderContext</a></h3>
+<code><a href="../../../../../../com/tokelon/toktales/core/render/IRenderContext.html#contextChanged-com.tokelon.toktales.core.screen.view.IViewTransformer-org.joml.Matrix4f-">contextChanged</a>, <a href="../../../../../../com/tokelon/toktales/core/render/IRenderContext.html#contextCreated--">contextCreated</a>, <a href="../../../../../../com/tokelon/toktales/core/render/IRenderContext.html#contextDestroyed--">contextDestroyed</a></code></li>
 </ul>
 </li>
 </ul>
@@ -229,8 +154,8 @@ var activeTableTab = "activeTableTab";
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../../com/tokelon/toktales/core/render/renderer/ImageRenderer.html" title="class in com.tokelon.toktales.core.render.renderer"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
-<li><a href="../../../../../../com/tokelon/toktales/core/render/renderer/ISegmentRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
+<li><a href="../../../../../../com/tokelon/toktales/core/render/renderer/IMultiRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer"><span class="typeNameLink">Prev&nbsp;Class</span></a></li>
+<li><a href="../../../../../../com/tokelon/toktales/core/render/renderer/IShapeRenderer.html" title="interface in com.tokelon.toktales.core.render.renderer"><span class="typeNameLink">Next&nbsp;Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../../index.html?com/tokelon/toktales/core/render/renderer/IRenderer.html" target="_top">Frames</a></li>
@@ -257,13 +182,13 @@ var activeTableTab = "activeTableTab";
 <li>Nested&nbsp;|&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li><a href="#method.summary">Method</a></li>
+<li>Method</li>
 </ul>
 <ul class="subNavList">
 <li>Detail:&nbsp;</li>
 <li>Field&nbsp;|&nbsp;</li>
 <li>Constr&nbsp;|&nbsp;</li>
-<li><a href="#method.detail">Method</a></li>
+<li>Method</li>
 </ul>
 </div>
 <a name="skip.navbar.bottom">

@@ -17,7 +17,7 @@
     catch(err) {
     }
 //-->
-var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6,"i24":6};
+var methods = {"i0":6,"i1":6,"i2":6,"i3":6,"i4":6,"i5":6,"i6":6,"i7":6,"i8":6,"i9":6,"i10":6,"i11":6,"i12":6,"i13":6,"i14":6,"i15":6,"i16":6,"i17":6,"i18":6,"i19":6,"i20":6,"i21":6,"i22":6,"i23":6};
 var tabs = {65535:["t0","All Methods"],2:["t2","Instance Methods"],4:["t3","Abstract Methods"]};
 var altColor = "altColor";
 var rowColor = "rowColor";
@@ -173,100 +173,94 @@ var activeTableTab = "activeTableTab";
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#getLogging--">getLogging</a></span>()</code>&nbsp;</td>
 </tr>
 <tr id="i9" class="rowColor">
-<td class="colFirst"><code><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderOrder.html" title="interface in com.tokelon.toktales.core.render.order">IRenderOrder</a></code></td>
-<td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#getRenderOrder--">getRenderOrder</a></span>()</code>
-<div class="block">Returns the render order for this state.</div>
-</td>
-</tr>
-<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/tokelon/toktales/core/game/state/scene/IGameSceneControl.html" title="interface in com.tokelon.toktales.core.game.state.scene">IGameSceneControl</a>&lt;? extends <a href="../../../../../../com/tokelon/toktales/core/game/state/scene/IGameScene.html" title="interface in com.tokelon.toktales.core.game.state.scene">IGameScene</a>&gt;</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#getSceneControl--">getSceneControl</a></span>()</code>
 <div class="block">You can override this method to return a custom scene control type.</div>
 </td>
 </tr>
-<tr id="i11" class="rowColor">
+<tr id="i10" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/tokelon/toktales/core/game/state/IControlHandler.html" title="interface in com.tokelon.toktales.core.game.state">IControlHandler</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#getStateControlHandler--">getStateControlHandler</a></span>()</code>
 <div class="block">The control handler handles all actions it is given,
  and is normally used by the state input handler for this reason.</div>
 </td>
 </tr>
-<tr id="i12" class="altColor">
+<tr id="i11" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/tokelon/toktales/core/game/state/IControlScheme.html" title="interface in com.tokelon.toktales.core.game.state">IControlScheme</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#getStateControlScheme--">getStateControlScheme</a></span>()</code>
 <div class="block">The control scheme provides a mapping from inputs to actions,
  and is used by the state input handler for this reason.</div>
 </td>
 </tr>
-<tr id="i13" class="rowColor">
+<tr id="i12" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameStateInput.html" title="interface in com.tokelon.toktales.core.game.state">IGameStateInput</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#getStateInput--">getStateInput</a></span>()</code>
 <div class="block">The state input is a manager that collects input handlers,
   and notifies them when new events happen.</div>
 </td>
 </tr>
-<tr id="i14" class="altColor">
+<tr id="i13" class="rowColor">
 <td class="colFirst"><code><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameStateInputHandler.html" title="interface in com.tokelon.toktales.core.game.state">IGameStateInputHandler</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#getStateInputHandler--">getStateInputHandler</a></span>()</code>
 <div class="block">The state input handler is the default way of processing state related events,
  and transforming them into actions on the gamestate or gamescene.</div>
 </td>
 </tr>
-<tr id="i15" class="rowColor">
+<tr id="i14" class="altColor">
 <td class="colFirst"><code><a href="../../../../../../com/tokelon/toktales/core/game/state/render/IGameStateRenderer.html" title="interface in com.tokelon.toktales.core.game.state.render">IGameStateRenderer</a></code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#getStateRenderer--">getStateRenderer</a></span>()</code>
 <div class="block">Returns the state renderer for this state.</div>
 </td>
 </tr>
-<tr id="i16" class="altColor">
+<tr id="i15" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#onDisengage--">onDisengage</a></span>()</code>
 <div class="block">Called when the state is removed from the state control.</div>
 </td>
 </tr>
-<tr id="i17" class="rowColor">
+<tr id="i16" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#onEngage--">onEngage</a></span>()</code>
 <div class="block">Called when the state is added to the state control.</div>
 </td>
 </tr>
-<tr id="i18" class="altColor">
+<tr id="i17" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#onEnter--">onEnter</a></span>()</code>
 <div class="block">Called when the state becomes the active state.</div>
 </td>
 </tr>
-<tr id="i19" class="rowColor">
+<tr id="i18" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#onExit--">onExit</a></span>()</code>
 <div class="block">Called when the state stops being the active state.</div>
 </td>
 </tr>
-<tr id="i20" class="altColor">
+<tr id="i19" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#onPause--">onPause</a></span>()</code>
 <div class="block">Called when the state is paused.</div>
 </td>
 </tr>
-<tr id="i21" class="rowColor">
+<tr id="i20" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#onRender--">onRender</a></span>()</code>
 <div class="block">Called to render the state.</div>
 </td>
 </tr>
-<tr id="i22" class="altColor">
+<tr id="i21" class="rowColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#onResume--">onResume</a></span>()</code>
 <div class="block">Called when the state is resumed.</div>
 </td>
 </tr>
-<tr id="i23" class="rowColor">
+<tr id="i22" class="altColor">
 <td class="colFirst"><code>void</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#onUpdate-long-">onUpdate</a></span>(long&nbsp;timeMillis)</code>
 <div class="block">Called to update the state.</div>
 </td>
 </tr>
-<tr id="i24" class="altColor">
+<tr id="i23" class="rowColor">
 <td class="colFirst"><code>boolean</code></td>
 <td class="colLast"><code><span class="memberNameLink"><a href="../../../../../../com/tokelon/toktales/core/game/state/IGameState.html#removeScene-java.lang.String-">removeScene</a></span>(<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;name)</code>
 <div class="block">Removes the scene for the given name if it exists.</div>
@@ -543,20 +537,6 @@ var activeTableTab = "activeTableTab";
 <dl>
 <dt><span class="returnLabel">Returns:</span></dt>
 <dd>The engine context.</dd>
-</dl>
-</li>
-</ul>
-<a name="getRenderOrder--">
-<!--   -->
-</a>
-<ul class="blockList">
-<li class="blockList">
-<h4>getRenderOrder</h4>
-<pre><a href="../../../../../../com/tokelon/toktales/core/render/order/IRenderOrder.html" title="interface in com.tokelon.toktales.core.render.order">IRenderOrder</a>&nbsp;getRenderOrder()</pre>
-<div class="block">Returns the render order for this state.</div>
-<dl>
-<dt><span class="returnLabel">Returns:</span></dt>
-<dd>A render order.</dd>
 </dl>
 </li>
 </ul>
